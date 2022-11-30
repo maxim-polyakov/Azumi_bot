@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discord_bot", "Azumi_bot\Discord_bot\Discord_bot.csproj", "{7C296898-0DAD-4795-A837-A4E2FC3BBEA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telegram_Bot", "Telegram_Bot\Telegram_Bot\Telegram_Bot.csproj", "{8EADD4BE-3FFF-4D3A-8E47-F3EDF0ADB4F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C296898-0DAD-4795-A837-A4E2FC3BBEA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C296898-0DAD-4795-A837-A4E2FC3BBEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C296898-0DAD-4795-A837-A4E2FC3BBEA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C296898-0DAD-4795-A837-A4E2FC3BBEA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EADD4BE-3FFF-4D3A-8E47-F3EDF0ADB4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EADD4BE-3FFF-4D3A-8E47-F3EDF0ADB4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EADD4BE-3FFF-4D3A-8E47-F3EDF0ADB4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EADD4BE-3FFF-4D3A-8E47-F3EDF0ADB4F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
