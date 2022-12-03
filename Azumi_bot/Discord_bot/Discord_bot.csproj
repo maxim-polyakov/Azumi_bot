@@ -14,6 +14,7 @@
       <PackageReference Include="Discord.Net.Core" Version="3.8.1" />
       <PackageReference Include="Discord.Net.Interactions" Version="3.8.1" />
       <PackageReference Include="Discord.Net.Rest" Version="3.8.1" />
+      <PackageReference Include="Discord.Net.Webhook" Version="3.8.1" />
       <PackageReference Include="Discord.Net.WebSocket" Version="3.8.1" />
       <PackageReference Include="Miki.Discord.Gateway" Version="5.0.0-v3599888767" />
       <PackageReference Include="Remora.Discord.Gateway" Version="11.0.1" />
