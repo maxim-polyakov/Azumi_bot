@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Npgsql;
 
 namespace DB_Bridge
@@ -6,45 +7,50 @@ namespace DB_Bridge
     public interface IDB_Communication
     {
         void insert_to();
-        void get_data();
+        List<List<string>> get_data();
         bool checkcommands();
     }
     
     public class DB_Communication:IDB_Communication
     {
 
-        static string Host = "localhost";
-        static string User = "postgres";
-        static string DBname = "MisaMemory";
-        static string Password = "postgres";
-        static string Port = "5432";
 
         public void insert_to()
         {
-            string connString =
-                String.Format("Server={0}; User Id={1}; Database={2}; Port={3}; Password={4};SSLMode=Prefer",
-                    Host,
-                    User,
-                    DBname,
-                    Port,
-                    Password);
-            
-            using (var conn = new NpgsqlConnection(connString))
-            {
-                Console.Out.WriteLine("Opening connection");
-                conn.Open();
-
-                using (var command = new NpgsqlCommand("SELECT * FROM train_sets.all_set_thanks", conn))
-                {
-                    int nRows = command.ExecuteNonQuery();
-                    
-                }
-            }
+           
         }
 
-        public void get_data()
+        public List<List<string>> get_data(string select)
         {
-            
+            var cs = "Host=localhost;Username=postgres;Password=postgres;Database=MisaMemory";
+
+            var conn = new NpgsqlConnection(cs);
+            conn.Open();
+
+            var cmd = new NpgsqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = select;
+
+            cmd.ExecuteNonQuery();
+
+            List<string> df_text = new List<string>();
+            List<string> df_label = new List<string>();
+
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            int count = 0;
+            while (dr.Read())
+            {
+                df_text.Add(dr[0].ToString());
+                df_label.Add(dr[1].ToString());
+
+            }
+
+            List<List<string>> df = new List<List<string>>();
+            df.Add(df_text);
+            df.Add(df_label);
+
+            return df;
         }
 
         public bool checkcommands()
