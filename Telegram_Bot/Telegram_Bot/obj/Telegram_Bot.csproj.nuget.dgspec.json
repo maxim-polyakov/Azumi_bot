@@ -4,6 +4,58 @@
     "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Telegram_Bot\\Telegram_Bot\\Telegram_Bot.csproj": {}
   },
   "projects": {
+    "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj",
+        "projectName": "Bot_package",
+        "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj"
+              },
+              "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\NLP_package.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\NLP_package.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj",
+        "projectName": "DB_Bridge",
+        "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\NLP_package.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\NLP_package.csproj",
+        "projectName": "NLP_package",
+        "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\NLP_package.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Telegram_Bot\\Telegram_Bot\\Telegram_Bot.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +80,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -44,6 +100,10 @@
             "Discord.Net.Core": {
               "target": "Package",
               "version": "[3.8.1, )"
+            },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             },
             "Telegram.Bot": {
               "target": "Package",
