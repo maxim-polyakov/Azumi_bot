@@ -13,15 +13,26 @@ namespace DB_Bridge
         {
             try
             {
-                var insertSql = "insert into " + tablename +
-                    " () " + "values";
                 var cs = "Host=localhost;Username=postgres;Password=postgres;Database=MisaMemory";
+                string insideSelect = "select * from messtorage.storage";
                 var conn = new NpgsqlConnection(cs);
                 conn.Open();
                 var cmd = new NpgsqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = insertSql;
+                cmd.CommandText = insideSelect;
+                cmd.ExecuteNonQuery();
                 NpgsqlDataReader dr = cmd.ExecuteReader();
+
+                var countRows = (int)dr.Rows;
+                conn.Close();
+                conn.Open();
+                var insertSql = "insert into " + tablename +
+                    " (id, text) " + "values" + "(" + (countRows+1).ToString() + ", " + insert + ")";
+                
+                cmd.Connection = conn;
+                cmd.CommandText = insertSql;
+                dr = cmd.ExecuteReader();
+                conn.Close();
             }
             catch
             {
