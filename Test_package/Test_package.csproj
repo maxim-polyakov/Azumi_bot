@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Analysis" Version="0.20.0" />
     <PackageReference Include="Microsoft.ML" Version="2.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
@@ -17,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\API_package\API_package.csproj" />
+    <ProjectReference Include="..\Bot_package\Bot_package.csproj" />
+    <ProjectReference Include="..\DB_Bridge\DB_Bridge.csproj" />
     <ProjectReference Include="..\NLP_package\NLP_package.csproj" />
   </ItemGroup>
 

@@ -8,6 +8,6 @@ namespace Bot_package
 {
     public abstract class Monitor:IMonitor
     {
-        public abstract String monitor(string content);
+        public abstract string monitor();
     }
 }

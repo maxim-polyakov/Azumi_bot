@@ -8,9 +8,14 @@ namespace Bot_package
 {
     public class MessageMonitorTelegram : MessageMonitor
     {
-        public override String monitor(string content)
+        public MessageMonitorTelegram(string content)
         {
-            return "";
+            this.content = content;
+        }
+
+        public override string monitor()
+        {
+            return base.monitor();
         }
     }
 }

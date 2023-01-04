@@ -8,7 +8,7 @@ namespace Discord_bot
     
     class Discord_bot
     {
-        private static MessageMonitorDiscord mmd = new MessageMonitorDiscord();
+        
         private DiscordSocketClient client = new DiscordSocketClient();
 
         static void Main(string[] args)
@@ -19,7 +19,7 @@ namespace Discord_bot
             client = new DiscordSocketClient();
             client.MessageReceived += CommandHandler;
 
-            var token = "MTA0ODQ5NTY4MDQ3OTU4MDIzMA.GWqXZm.ERgd6XojYVZgyUjlg4XatpGJeOEwQxvLnhPJPY";
+            var token = "MTA0ODQ5NTY4MDQ3OTU4MDIzMA.GTwzpX.QC_3z-50mLPgeqrEvtM0lA0gsl_MTlNi-zEPPM";
 
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();
@@ -29,9 +29,10 @@ namespace Discord_bot
 
         private Task CommandHandler(SocketMessage msg)
         {
+            MessageMonitorDiscord mmd = new MessageMonitorDiscord(msg.Content);
             if (!msg.Author.IsBot)
             {
-                msg.Channel.SendMessageAsync(mmd.monitor(msg.Content));
+                msg.Channel.SendMessageAsync(mmd.monitor());
             }
             return Task.CompletedTask;
         }

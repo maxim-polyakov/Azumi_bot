@@ -8,6 +8,6 @@ namespace Bot_package
 {
     public interface IMonitor
     {
-        String monitor(string content);
+        string monitor();
     }
 }

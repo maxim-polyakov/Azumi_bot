@@ -10,24 +10,15 @@ using Microsoft.Extensions.FileProviders;
 using DB_Bridge;
 namespace Bot_package
 {
-    public class MessageMonitorDiscord : MessageMonitor
+    public class MessageMonitorDiscord :MessageMonitor
     {
-        
-        public override string monitor(string content)
+        public MessageMonitorDiscord(string content)
         {
-            MessageMonitor.bridge.insert_to(content, "messtorage.storage");
-
-            string outputmessage = string.Empty;
-            
-            List<string> messagelist = this.neurodesc(content);
-
-            foreach (string mesage in messagelist)
-            {
-                outputmessage += mesage;
-            }     
-
-            return outputmessage;
+            this.content = content;
         }
-
+        public override string monitor()
+        {
+            return base.monitor();
+        }
     }
 }

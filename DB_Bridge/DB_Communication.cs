@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using Npgsql;
 using Microsoft.Data.Analysis;
+using System.Threading;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DB_Bridge
 {
@@ -11,47 +13,29 @@ namespace DB_Bridge
     {
         public void insert_to(string insert, string tablename)
         {
-            try
+            var cs = new Connections().cs;
+            var dataSource = NpgsqlDataSource.Create(cs);
+            var countrows = 0;
+            using (var cmd = dataSource.CreateCommand("select count(text) from messtorage.storage"))
+            using (var reader = cmd.ExecuteReader())
             {
-                var cs = "Host=localhost;Username=postgres;Password=postgres;Database=MisaMemory";
-                string insideSelect = "select * from messtorage.storage";
-                var conn = new NpgsqlConnection(cs);
-                conn.Open();
-                var cmd = new NpgsqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = insideSelect;
+                while (reader.Read())
+                {
+                    countrows = reader.GetInt32(0);
+                }
+            }
+
+            string inside = "insert into " + tablename + " (id,text) values ("+ (countrows+1) + ",'" + insert + "')";
+            using (var cmd = dataSource.CreateCommand(inside))
+            {
                 cmd.ExecuteNonQuery();
-                NpgsqlDataReader dr = cmd.ExecuteReader();
-
-                var countRows = (int)dr.Rows;
-                conn.Close();
-                conn.Open();
-                var insertSql = "insert into " + tablename +
-                    " (id, text) " + "values" + "(" + (countRows+1).ToString() + ", " + insert + ")";
-                
-                cmd.Connection = conn;
-                cmd.CommandText = insertSql;
-                dr = cmd.ExecuteReader();
-                conn.Close();
             }
-            catch
-            {
-
-            }
-
         }
         public DataFrame get_data(string select)
         {
+            var cs = new Connections().cs;
+            var dataSource = NpgsqlDataSource.Create(cs);
             int id = 1;
-            var conection = new Connections();
-            var cs = conection.cs;
-            var conn = new NpgsqlConnection(cs);
-            conn.Open();
-            var cmd = new NpgsqlCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = select;
-            cmd.ExecuteNonQuery();
-            NpgsqlDataReader dr = cmd.ExecuteReader();
 
             SentimentData sd = new SentimentData();
             sd.id = new PrimitiveDataFrameColumn<int>("id", 0);
@@ -64,24 +48,27 @@ namespace DB_Bridge
             sd.thanks = new BooleanDataFrameColumn("thanks", 0);
             sd.emotionid = new BooleanDataFrameColumn("emotionid", 0);
             sd.trash = new BooleanDataFrameColumn("trash", 0);
-           
-            while (dr.Read())
-            {
-                sd.id.Append(id);
-                sd.text.Append(dr[0].ToString());
-                sd.agenda.Append(dr[1].ToString());
-                sd.agendaid.Append(Convert.ToBoolean(Int32.Parse(dr[2].ToString())));
-                sd.hi.Append(Convert.ToBoolean(Int32.Parse(dr[3].ToString())));
-                sd.business.Append(Convert.ToBoolean(Int32.Parse(dr[4].ToString())));
-                sd.weather.Append(Convert.ToBoolean(Int32.Parse(dr[5].ToString())));
-                sd.thanks.Append(Convert.ToBoolean(Int32.Parse(dr[6].ToString())));
-                sd.emotionid.Append(Convert.ToBoolean(Int32.Parse(dr[7].ToString())));
-                sd.trash.Append(Convert.ToBoolean(Int32.Parse(dr[8].ToString())));
-                id++;
-            }
 
-            DataFrameColumn[] columns =
+            using (var cmd = dataSource.CreateCommand(select))
+            using (var reader = cmd.ExecuteReader())
             {
+                while (reader.Read())
+                {
+                    sd.id.Append(id);
+                    sd.text.Append(reader[0].ToString());
+                    sd.agenda.Append(reader[1].ToString());
+                    sd.agendaid.Append(Convert.ToBoolean(Int32.Parse(reader[2].ToString())));
+                    sd.hi.Append(Convert.ToBoolean(Int32.Parse(reader[3].ToString())));
+                    sd.business.Append(Convert.ToBoolean(Int32.Parse(reader[4].ToString())));
+                    sd.weather.Append(Convert.ToBoolean(Int32.Parse(reader[5].ToString())));
+                    sd.thanks.Append(Convert.ToBoolean(Int32.Parse(reader[6].ToString())));
+                    sd.emotionid.Append(Convert.ToBoolean(Int32.Parse(reader[7].ToString())));
+                    sd.trash.Append(Convert.ToBoolean(Int32.Parse(reader[8].ToString())));
+                    id++;
+                }
+            }
+            DataFrameColumn[] columns =
+    {
                     sd.id,
                     sd.text,
                     sd.agenda,

@@ -13,10 +13,11 @@ namespace Bot_package
 {
     public class MessageMonitor : Monitor
     {
-
         private static IPredictor predictor = new Predictor();
         private static Maps map = new Maps();
         protected static IDB_Communication bridge = new DB_Communication();
+
+        protected string content { get; set; }
 
         private string classify(string chosen_item)
         {
@@ -29,7 +30,8 @@ namespace Bot_package
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
         }
-        protected List<string> decision(string hipredict, string thpredict, string businesspredict, string weatherpredict,string trashpredict)
+
+        private List<string> decision(string hipredict, string thpredict, string businesspredict, string weatherpredict,string trashpredict)
         {
             string tmp_classification = classify(hipredict);
             List<string> outlist = new List<string>();
@@ -42,10 +44,9 @@ namespace Bot_package
 
         protected List<string> neurodesc(string content)
         {
+            string fullPath = "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\";
+
             List<string[]> modelPahths = new List<string[]>();
-
-            string fullPath = Path.Combine("C:\\Users\\maxim\\Documents", "\\GitHub\\Azumi_bot\\");
-
             modelPahths.Add(Directory.GetFiles(fullPath, "himodel.zip", SearchOption.AllDirectories));
             modelPahths.Add(Directory.GetFiles(fullPath, "thmodel.zip", SearchOption.AllDirectories));
             modelPahths.Add(Directory.GetFiles(fullPath, "businessmodel.zip", SearchOption.AllDirectories));
@@ -62,11 +63,21 @@ namespace Bot_package
             return messagelist;
         }
 
-
-
-        public override String monitor(string content)
+        public override string monitor()
         {
-            return "";
+            MessageMonitor.bridge.insert_to(content, "messtorage.storage");
+
+            string outputmessage = string.Empty;
+
+            List<string> messagelist = this.neurodesc(content);
+
+            foreach (string mesage in messagelist)
+            {
+                outputmessage += mesage;
+            }
+
+            return outputmessage;
         }
     }
 }
+
