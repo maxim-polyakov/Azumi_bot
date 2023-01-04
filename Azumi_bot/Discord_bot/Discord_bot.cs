@@ -29,7 +29,7 @@ namespace Discord_bot
 
         private Task CommandHandler(SocketMessage msg)
         {
-            MessageMonitorDiscord mmd = new MessageMonitorDiscord(msg.Content);
+            IMonitor mmd = new MessageMonitorDiscord(msg.Content);
             if (!msg.Author.IsBot)
             {
                 msg.Channel.SendMessageAsync(mmd.monitor());

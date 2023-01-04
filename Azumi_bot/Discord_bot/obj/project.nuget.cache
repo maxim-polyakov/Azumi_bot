@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dIuMZrzApG26jdgdsn9mKPztVzDA95sEE2J8S85JHIlNqUfuvI6g6UUP1g3jushEafVPiKFoHRmARJU4AjgPWA==",
+  "dgSpecHash": "Y6Bz67C3+IbyxhMKXHFhV4iS+qKeVfcPzk/ABP6/49HjdIcZxUK6RWgvsOqLK2dezmqOurP7hruCM+al24pdpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Azumi_bot\\Discord_bot\\Discord_bot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\maxim\\.nuget\\packages\\apache.arrow\\2.0.0\\apache.arrow.2.0.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\discord.net\\3.8.1\\discord.net.3.8.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\discord.net.commands\\3.8.1\\discord.net.commands.3.8.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\discord.net.core\\3.8.1\\discord.net.core.3.8.1.nupkg.sha512",
@@ -12,6 +13,7 @@
     "C:\\Users\\maxim\\.nuget\\packages\\discord.net.webhook\\3.8.1\\discord.net.webhook.3.8.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\discord.net.websocket\\3.8.1\\discord.net.websocket.3.8.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\jsondocumentpath\\1.0.3\\jsondocumentpath.1.0.3.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\microsoft.data.analysis\\0.20.0\\microsoft.data.analysis.0.20.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
@@ -53,7 +55,7 @@
     "C:\\Users\\maxim\\.nuget\\packages\\remora.rest.core\\2.0.4\\remora.rest.core.2.0.4.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\remora.results\\7.2.2\\remora.results.7.2.2.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
-    "C:\\Users\\maxim\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\system.codedom\\4.5.0\\system.codedom.4.5.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

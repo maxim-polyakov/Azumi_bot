@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "Apache.Arrow/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.0",
+          "System.Memory": "4.5.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/Apache.Arrow.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Apache.Arrow.dll": {}
+        }
+      },
       "Discord.Net/3.8.1": {
         "type": "package",
         "dependencies": {
@@ -126,6 +141,26 @@
         },
         "runtime": {
           "lib/net6.0/JsonDocumentPath.dll": {}
+        }
+      },
+      "Microsoft.Data.Analysis/0.20.0": {
+        "type": "package",
+        "dependencies": {
+          "Apache.Arrow": "2.0.0",
+          "Microsoft.ML.DataView": "2.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Analysis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Analysis.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -835,7 +870,7 @@
           }
         }
       },
-      "System.Buffers/4.5.0": {
+      "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -1247,6 +1282,20 @@
     }
   },
   "libraries": {
+    "Apache.Arrow/2.0.0": {
+      "sha512": "VR+F7g41WMJhr7WoZwwp05OrbYgM5Kmj3FwFXv1g0GgAYhEoCJz3L3qpllUWq9+X/rFKkFRZ2B8XcmsbaqGhrw==",
+      "type": "package",
+      "path": "apache.arrow/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "apache.arrow.2.0.0.nupkg.sha512",
+        "apache.arrow.nuspec",
+        "lib/netcoreapp2.1/Apache.Arrow.dll",
+        "lib/netstandard1.3/Apache.Arrow.dll"
+      ]
+    },
     "Discord.Net/3.8.1": {
       "sha512": "0Ed385FnrcN/4iH4a4nLwXZjRNT00ZK9VmYgE1Gefq/+A5FhjquGDgBdFn43H7u8pM1pHW0xP8iwiqjrtl0vpA==",
       "type": "package",
@@ -1399,6 +1448,24 @@
         "jsondocumentpath.nuspec",
         "lib/net6.0/JsonDocumentPath.dll",
         "lib/netstandard2.1/JsonDocumentPath.dll"
+      ]
+    },
+    "Microsoft.Data.Analysis/0.20.0": {
+      "sha512": "ctr4urdbWELW4mdwpM0o2FeiLGj4MM5M6HAN2aOzFQRK9XL6PvsKGojRHvPIA0iDh7nz6aK0dwT/m2Y4EcfRVg==",
+      "type": "package",
+      "path": "microsoft.data.analysis/0.20.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.TXT",
+        "interactive-extensions/dotnet/Microsoft.Data.Analysis.Interactive.dll",
+        "interactive-extensions/dotnet/Microsoft.Data.Analysis.Interactive.xml",
+        "lib/netstandard2.0/Microsoft.Data.Analysis.dll",
+        "lib/netstandard2.0/Microsoft.Data.Analysis.xml",
+        "microsoft.data.analysis.0.20.0.nupkg.sha512",
+        "microsoft.data.analysis.nuspec",
+        "mlnetlogo.png"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -2207,15 +2274,17 @@
         "serilog.nuspec"
       ]
     },
-    "System.Buffers/4.5.0": {
-      "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
       "type": "package",
-      "path": "system.buffers/4.5.0",
+      "path": "system.buffers/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.1/System.Buffers.dll",
         "lib/netstandard1.1/System.Buffers.xml",
@@ -2230,7 +2299,7 @@
         "ref/netstandard2.0/System.Buffers.dll",
         "ref/netstandard2.0/System.Buffers.xml",
         "ref/uap10.0.16299/_._",
-        "system.buffers.4.5.0.nupkg.sha512",
+        "system.buffers.4.5.1.nupkg.sha512",
         "system.buffers.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -3358,6 +3427,7 @@
       "Discord.Net.Rest >= 3.8.1",
       "Discord.Net.WebSocket >= 3.8.1",
       "Discord.Net.Webhook >= 3.8.1",
+      "Microsoft.Data.Analysis >= 0.20.0",
       "Microsoft.ML >= 2.0.0",
       "Miki.Discord.Gateway >= 5.0.0-v3599888767",
       "Remora.Discord.Gateway >= 11.0.1"
@@ -3434,6 +3504,10 @@
           "Discord.Net.Webhook": {
             "target": "Package",
             "version": "[3.8.1, )"
+          },
+          "Microsoft.Data.Analysis": {
+            "target": "Package",
+            "version": "[0.20.0, )"
           },
           "Microsoft.ML": {
             "target": "Package",

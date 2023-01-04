@@ -23,17 +23,6 @@ public class DBCommunicztion_Test
     [TestMethod]
     public void TestMethod_get_data()
     {
-        string select = "select * FROM train_sets.all_set_thanks" +
-           " union all " +
-           "select * FROM train_sets.all_set_none" +
-           " union all " +
-           "select * FROM train_sets.all_set_hi" +
-           " union all " +
-           "select * FROM train_sets.all_set_business" +
-           " union all " +
-           "select * FROM train_sets.all_set_weather" +
-           " order by agendaid asc";
-
-        DataFrame df = bridge.get_data(select);
+        Dictionary<int,string> dict = bridge.get_data("SELECT * FROM answer_sets.hianswer");
     }
 }

@@ -903,6 +903,18 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "Answer_package/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "DB_Bridge": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Answer_package.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Answer_package.dll": {}
+        }
+      },
       "API_package/1.0.0": {
         "type": "project",
         "compile": {
@@ -923,6 +935,15 @@
         },
         "runtime": {
           "bin/placeholder/Bot_package.dll": {}
+        }
+      },
+      "Command_package/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Command_package.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Command_package.dll": {}
         }
       },
       "DB_Bridge/1.0.0": {
@@ -3321,6 +3342,11 @@
         "version.txt"
       ]
     },
+    "Answer_package/1.0.0": {
+      "type": "project",
+      "path": "../Answer_package/Answer_package.csproj",
+      "msbuildProject": "../Answer_package/Answer_package.csproj"
+    },
     "API_package/1.0.0": {
       "type": "project",
       "path": "../API_package/API_package.csproj",
@@ -3330,6 +3356,11 @@
       "type": "project",
       "path": "../Bot_package/Bot_package.csproj",
       "msbuildProject": "../Bot_package/Bot_package.csproj"
+    },
+    "Command_package/1.0.0": {
+      "type": "project",
+      "path": "../Command_package/Command_package.csproj",
+      "msbuildProject": "../Command_package/Command_package.csproj"
     },
     "DB_Bridge/1.0.0": {
       "type": "project",
@@ -3345,7 +3376,9 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "API_package >= 1.0.0",
+      "Answer_package >= 1.0.0",
       "Bot_package >= 1.0.0",
+      "Command_package >= 1.0.0",
       "DB_Bridge >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
@@ -3384,11 +3417,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Answer_package\\Answer_package.csproj": {
+              "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Answer_package\\Answer_package.csproj"
+            },
             "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\API_package\\API_package.csproj": {
               "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\API_package\\API_package.csproj"
             },
             "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj": {
               "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj"
+            },
+            "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Command_package\\Command_package.csproj": {
+              "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Command_package\\Command_package.csproj"
             },
             "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj": {
               "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj"

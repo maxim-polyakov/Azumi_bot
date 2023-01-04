@@ -10,15 +10,12 @@ using Microsoft.Extensions.FileProviders;
 using DB_Bridge;
 namespace Bot_package
 {
-    public class MessageMonitorDiscord :MessageMonitor
+    public class MessageMonitorDiscord : Monitor
     {
         public MessageMonitorDiscord(string content)
         {
             this.content = content;
         }
-        public override string monitor()
-        {
-            return base.monitor();
-        }
+        public string monitor() => base.monitor();
     }
 }

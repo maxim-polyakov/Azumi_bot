@@ -19,7 +19,7 @@ namespace TelegramBot
             if(update.Type == Telegram.Bot.Types.Enums.UpdateType.Message)
             {
                 var message = update.Message;
-                MessageMonitorTelegram mmt = new MessageMonitorTelegram(message.Text);
+                IMonitor mmt = new MessageMonitorTelegram(message.Text);
         await botClient.SendTextMessageAsync(message.Chat, mmt.monitor());
             }
         }

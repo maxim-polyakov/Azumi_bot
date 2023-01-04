@@ -4,6 +4,25 @@
     "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Test_package\\Test_package.csproj": {}
   },
   "projects": {
+    "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Answer_package\\Answer_package.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Answer_package\\Answer_package.csproj",
+        "projectName": "Answer_package",
+        "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Answer_package\\Answer_package.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\API_package\\API_package.csproj": {
       "restore": {
         "projectUniqueName": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\API_package\\API_package.csproj",
@@ -34,6 +53,21 @@
                 "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\NLP_package.csproj"
               }
             }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Command_package\\Command_package.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Command_package\\Command_package.csproj",
+        "projectName": "Command_package",
+        "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Command_package\\Command_package.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
           }
         }
       },
@@ -96,11 +130,17 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Answer_package\\Answer_package.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Answer_package\\Answer_package.csproj"
+              },
               "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\API_package\\API_package.csproj": {
                 "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\API_package\\API_package.csproj"
               },
               "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj": {
                 "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Bot_package\\Bot_package.csproj"
+              },
+              "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Command_package\\Command_package.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\Command_package\\Command_package.csproj"
               },
               "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj": {
                 "projectPath": "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\DB_Bridge\\DB_Bridge.csproj"

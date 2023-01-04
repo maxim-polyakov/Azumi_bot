@@ -101,6 +101,10 @@
               "target": "Package",
               "version": "[3.8.1, )"
             },
+            "Microsoft.Data.Analysis": {
+              "target": "Package",
+              "version": "[0.20.0, )"
+            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[2.0.0, )"

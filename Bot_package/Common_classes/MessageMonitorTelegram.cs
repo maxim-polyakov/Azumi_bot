@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bot_package
 {
-    public class MessageMonitorTelegram : MessageMonitor
+    public class MessageMonitorTelegram : Monitor
     {
         public MessageMonitorTelegram(string content)
         {
             this.content = content;
         }
 
-        public override string monitor()
-        {
-            return base.monitor();
-        }
+        public string monitor() => base.monitor();
     }
 }
