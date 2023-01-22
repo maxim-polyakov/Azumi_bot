@@ -1,14 +1,6 @@
 ﻿using DB_Bridge;
 using NLP_package;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Answer_package;
-using System.Windows.Input;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using Command_package;
 
 namespace Bot_package

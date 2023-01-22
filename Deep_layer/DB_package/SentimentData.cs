@@ -1,5 +1,4 @@
-﻿using Microsoft.ML.Data;
-using Microsoft.Data.Analysis;
+﻿using Microsoft.Data.Analysis;
 
 namespace DB_Bridge
 {

@@ -1,8 +1,4 @@
 ﻿using DB_Bridge;
-using Microsoft.Data.Analysis;
-using static System.Net.Mime.MediaTypeNames;
-using System.Collections.Generic;
-using System;
 
 namespace Answer_package
 {
