@@ -1,6 +1,6 @@
 ﻿namespace Command_package
 {
-    public class CommandAnalyzer
+    public class CommandAnalyzer:ICommandAnalyzer
     {
     }
 }

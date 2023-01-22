@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Answer_package;
+using System.Windows.Input;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using Command_package;
 
 namespace Bot_package
 {
@@ -24,28 +27,60 @@ namespace Bot_package
 
             Dictionary<string, string> info_dict = new Dictionary<string, string>()
             {
-                { "Приветствие", answ.answer()}
+                { "Приветствие", answ.answer() + ". "},
+                { "Благодарность","Не за что."},
+                { "Дело","Утверждение про дела. "},
+                {"Погода","Утверждение про погоду. "},
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
         }
 
-        private List<string> decision(string hipredict, string thpredict, string businesspredict, string weatherpredict, string trashpredict)
+        private string classify_question(string chosen_item)
         {
-            string tmp_classification = classify(hipredict);
+            string outstring = string.Empty;
+
+            Dictionary<string, string> info_dict = new Dictionary<string, string>()
+            {
+                {"Дело", "Я в порядке. "},
+                {"Погода", "Погода норм. "}
+            };
+            info_dict.TryGetValue(chosen_item, out outstring);
+            return outstring;
+        }
+
+        private List<string> decision(string text_message, ICommandAnalyzer command, string hipredict, string thpredict, string businesspredict, string weatherpredict, string trashpredict)
+        {
             List<string> outlist = new List<string>();
-            outlist.Add(tmp_classification);
-            outlist.Add(classify(thpredict));
-            outlist.Add(classify(businesspredict));
+
+            if (bridge.checkcommands(text_message))
+            {
+                outlist.Add("command");
+            }
+            else if(text_message.Contains('?'))
+            {
+                outlist.Add(classify_question(businesspredict));
+                outlist.Add(classify_question(weatherpredict));
+            }
+            else
+            {
+                outlist.Add(classify(businesspredict));
+                outlist.Add(classify(weatherpredict));
+                outlist.Add(classify(hipredict));
+                outlist.Add(classify(thpredict));
+            }
             outlist.Add(classify(trashpredict));
+
             return outlist;
         }
 
-        protected List<string> neurodesc(string content)
+        protected List<string> neurodesc(string content, ICommandAnalyzer command)
         {
-            string fullPath = "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\";
+            string fullPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GitHub\\Azumi_bot\\";
 
             List<string[]> modelPahths = new List<string[]>();
+
             modelPahths.Add(Directory.GetFiles(fullPath, "himodel.zip", SearchOption.AllDirectories));
             modelPahths.Add(Directory.GetFiles(fullPath, "thmodel.zip", SearchOption.AllDirectories));
             modelPahths.Add(Directory.GetFiles(fullPath, "businessmodel.zip", SearchOption.AllDirectories));
@@ -58,24 +93,23 @@ namespace Bot_package
                    weatherpredict = predictor.predict(content, modelPahths[3][0], map.businessmap),
                    trashpredict = predictor.predict(content, modelPahths[4][0], map.trashmap);
 
-            List<string> messagelist = this.decision(hipredict, thpredict, businesspredict, weatherpredict, trashpredict);
+            List<string> messagelist = this.decision(content, command, hipredict, thpredict, businesspredict, weatherpredict, trashpredict);
             return messagelist;
         }
 
         public string monitor()
         {
+            ICommandAnalyzer command = new CommandAnalyzer();
             bridge.insert_to(content, "messtorage.storage");
-
             string outputmessage = string.Empty;
 
-            List<string> messagelist = this.neurodesc(content);
+            List<string> messagelist = this.neurodesc(content, command);
 
             foreach (string mesage in messagelist)
             {
                 outputmessage += mesage;
             }
-
-            return outputmessage;
+            return outputmessage + "|";
         }
     }
 }

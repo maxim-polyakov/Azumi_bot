@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Command_package
 {
-    internal interface ICommandAnalyzer
+    public interface ICommandAnalyzer
     {
     }
 }
