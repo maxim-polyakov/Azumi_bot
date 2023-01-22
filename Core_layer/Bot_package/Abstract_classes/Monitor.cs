@@ -54,9 +54,12 @@ namespace Bot_package
         {
             List<string> outlist = new List<string>();
 
+            outlist.Add(classify(hipredict));
+            outlist.Add(classify(thpredict));
+
             if (bridge.checkcommands(text_message))
             {
-                outlist.Add("command");
+                outlist.Add(command.commandanalyse(text_message));
             }
             else if(text_message.Contains('?'))
             {
@@ -67,8 +70,6 @@ namespace Bot_package
             {
                 outlist.Add(classify(businesspredict));
                 outlist.Add(classify(weatherpredict));
-                outlist.Add(classify(hipredict));
-                outlist.Add(classify(thpredict));
             }
             outlist.Add(classify(trashpredict));
 
@@ -99,7 +100,7 @@ namespace Bot_package
 
         public string monitor()
         {
-            ICommandAnalyzer command = new CommandAnalyzer();
+            ICommandAnalyzer command = new CommandAnalyzer(this.content);
             bridge.insert_to(content, "messtorage.storage");
             string outputmessage = string.Empty;
 

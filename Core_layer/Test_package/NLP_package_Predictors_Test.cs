@@ -9,11 +9,22 @@ public class Predictor_Test
     public void TestMethod_Predict()
     {
         Maps map = new Maps();
-
+        string fullPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         string text = "привет";
-        var hiflag = predictor.predict(text, "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\Models\\himodel.zip", map.himap);
-        var thflag = predictor.predict(text, "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\Models\\thmodel.zip", map.thmap);
-        var businessflag = predictor.predict(text, "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\Models\\businessmodel.zip", map.businessmap);
-        var trashflag = predictor.predict(text, "C:\\Users\\maxim\\Documents\\GitHub\\Azumi_bot\\NLP_package\\Models\\trashmodel.zip", map.trashmap);
+
+        List<string[]> modelPahths = new List<string[]>();
+
+        modelPahths.Add(Directory.GetFiles(fullPath, "himodel.zip", SearchOption.AllDirectories));
+        modelPahths.Add(Directory.GetFiles(fullPath, "thmodel.zip", SearchOption.AllDirectories));
+        modelPahths.Add(Directory.GetFiles(fullPath, "businessmodel.zip", SearchOption.AllDirectories));
+        modelPahths.Add(Directory.GetFiles(fullPath, "weathermodel.zip", SearchOption.AllDirectories));
+        modelPahths.Add(Directory.GetFiles(fullPath, "trashmodel.zip", SearchOption.AllDirectories));
+
+        var hipredict = predictor.predict(text, modelPahths[0][0], map.himap);
+        var thpredict = predictor.predict(text, modelPahths[1][0], map.thmap);
+        var businesspredict = predictor.predict(text, modelPahths[2][0], map.businessmap);
+        var weatherpredict = predictor.predict(text, modelPahths[3][0], map.trashmap);
+        var trashpredict = predictor.predict(text, modelPahths[4][0], map.trashmap);
+
     }
 }

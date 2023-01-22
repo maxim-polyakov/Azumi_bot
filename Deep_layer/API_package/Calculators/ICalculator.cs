@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Command_package
+namespace API_package
 {
-    public interface ICommandAnalyzer
+    public interface ICalculator
     {
-        public string commandanalyse(string command);
+        public string deravative();
     }
 }
