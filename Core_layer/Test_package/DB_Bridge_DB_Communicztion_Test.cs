@@ -11,7 +11,7 @@ public class DBCommunicztion_Test
     [TestMethod]
     public void TestMethod_insert_to()
     {
-        bridge.insert_to("привет", "messtorage.storage");
+        bridge.insert_to("привет2", "messtorage.storage");
     }
 
     [TestMethod]
