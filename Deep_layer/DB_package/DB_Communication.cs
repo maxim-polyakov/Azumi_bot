@@ -16,7 +16,7 @@ namespace DB_Bridge
             var cs = new Connections().cs;
             var dataSource = NpgsqlDataSource.Create(cs);
             var countrows = 0;
-            using (var cmd = dataSource.CreateCommand("select count(text) from messtorage.storage"))
+            using (var cmd = dataSource.CreateCommand("select count(text) from " + tablename + "\"))
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
