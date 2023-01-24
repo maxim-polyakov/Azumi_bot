@@ -8,7 +8,7 @@ public class Monitor_Test
     [TestMethod]
     public void TestMethod_TelegramMonitor()
     {
-        IMonitor mon = new MessageMonitorTelegram("привет как дела?");
+        IMonitor mon = new MessageMonitorTelegram("тут?");
         mon.monitor();
     }
 

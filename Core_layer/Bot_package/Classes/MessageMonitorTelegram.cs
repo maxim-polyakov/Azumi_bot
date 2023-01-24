@@ -4,7 +4,7 @@
     {
         public MessageMonitorTelegram(string content)
         {
-            this.content = content;
+            base.content = content;
         }
 
         public string monitor() => base.monitor();

@@ -28,11 +28,13 @@ namespace Discord_bot
 
         private Task CommandHandler(SocketMessage msg)
         {
-            IMonitor mmd = new MessageMonitorDiscord(msg.Content);
-            if (!msg.Author.IsBot)
+            if (msg.Content != null)
             {
-
-                msg.Channel.SendMessageAsync(mmd.monitor());
+                IMonitor mmd = new MessageMonitorDiscord(msg.Content);
+                if (!msg.Author.IsBot)
+                {
+                    msg.Channel.SendMessageAsync(mmd.monitor());
+                }
             }
             return Task.CompletedTask;
         }

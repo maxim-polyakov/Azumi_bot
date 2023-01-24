@@ -49,8 +49,6 @@ namespace Bot_package
         {
             List<string> outlist = new List<string>();
 
-
-
             if (bridge.checkcommands(text_message))
             {
                 outlist.Add(command.commandanalyse(text_message));
