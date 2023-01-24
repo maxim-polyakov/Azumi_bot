@@ -21,6 +21,7 @@
     <ProjectReference Include="..\..\Deep_layer\DB_package\DB_package.csproj" />
     <ProjectReference Include="..\..\Deep_layer\NLP_package\NLP_package.csproj" />
     <ProjectReference Include="..\Answer_package\Answer_package.csproj" />
+    <ProjectReference Include="..\Bot_package\Bot_package.csproj" />
   </ItemGroup>
 
 </Project>

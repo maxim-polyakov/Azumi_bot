@@ -28,5 +28,19 @@
             { false, "Не погода"}
         };
     }
+
+    public class ListMaps:Maps
+    {
+        public List<Dictionary<bool, string>> GetListMaps()
+        {
+            List<Dictionary<bool, string>> lmaps = new List<Dictionary<bool, string>>();
+            lmaps.Add(this.himap);
+            lmaps.Add(this.thmap);
+            lmaps.Add(this.businessmap);
+            lmaps.Add(this.weathermap);
+            lmaps.Add(this.trashmap);
+            return lmaps;
+        }
+    }
 }
 

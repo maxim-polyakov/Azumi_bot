@@ -8,9 +8,9 @@ namespace Bot_package
     public abstract class Monitor : IMonitor
     {
         private static IPredictor predictor = new Predictor();
-        private static Maps map = new Maps();
         private static IDB_Communication bridge = new DB_Communication();
         private static IAnswer answ = new RandomAnswer();
+        private static ListMaps listMaps= new ListMaps();
         protected string content { get; set; }
 
         private string classify(string chosen_item)
@@ -35,19 +35,21 @@ namespace Bot_package
 
             Dictionary<string, string> info_dict = new Dictionary<string, string>()
             {
+                { "Приветствие", answ.answer() + ". "},
+                { "Благодарность","Не за что."},
                 {"Дело", "Я в порядке. "},
-                {"Погода", "Погода норм. "}
+                {"Погода", "Погода норм. "},
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
         }
 
-        private List<string> decision(string text_message, ICommandAnalyzer command, string hipredict, string thpredict, string businesspredict, string weatherpredict, string trashpredict)
+        private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts)
         {
             List<string> outlist = new List<string>();
 
-            outlist.Add(classify(hipredict));
-            outlist.Add(classify(thpredict));
+
 
             if (bridge.checkcommands(text_message))
             {
@@ -55,38 +57,41 @@ namespace Bot_package
             }
             else if(text_message.Contains('?'))
             {
-                outlist.Add(classify_question(businesspredict));
-                outlist.Add(classify_question(weatherpredict));
+                foreach (string predict in predicts)
+                {
+                    outlist.Add(classify_question(predict));
+                }
             }
             else
             {
-                outlist.Add(classify(businesspredict));
-                outlist.Add(classify(weatherpredict));
+                foreach (string predict in predicts)
+                {
+                    outlist.Add(classify(predict));
+                }
             }
-            outlist.Add(classify(trashpredict));
-
             return outlist;
         }
 
         protected List<string> neurodesc(string content, ICommandAnalyzer command)
         {
-            string fullPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GitHub\\Azumi_bot\\";
+            string fullPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\Models";
 
             List<string[]> modelPahths = new List<string[]>();
 
-            modelPahths.Add(Directory.GetFiles(fullPath, "himodel.zip", SearchOption.AllDirectories));
-            modelPahths.Add(Directory.GetFiles(fullPath, "thmodel.zip", SearchOption.AllDirectories));
-            modelPahths.Add(Directory.GetFiles(fullPath, "businessmodel.zip", SearchOption.AllDirectories));
-            modelPahths.Add(Directory.GetFiles(fullPath, "weathermodel.zip", SearchOption.AllDirectories));
-            modelPahths.Add(Directory.GetFiles(fullPath, "trashmodel.zip", SearchOption.AllDirectories));
+            int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
 
-            string hipredict = predictor.predict(content, modelPahths[0][0], map.himap),
-                   thpredict = predictor.predict(content, modelPahths[1][0], map.thmap),
-                   businesspredict = predictor.predict(content, modelPahths[2][0], map.businessmap),
-                   weatherpredict = predictor.predict(content, modelPahths[3][0], map.businessmap),
-                   trashpredict = predictor.predict(content, modelPahths[4][0], map.trashmap);
+            string[] models = Directory.GetFiles(fullPath);
 
-            List<string> messagelist = this.decision(content, command, hipredict, thpredict, businesspredict, weatherpredict, trashpredict);
+            string[] predicts = new string[CountFiles];
+            int i = 0;
+            List<Dictionary<bool, string>>  maplist = listMaps.GetListMaps();
+
+            foreach (string model in models)
+            {   
+                predicts[i] = predictor.predict(content, model, maplist[i]);
+                i++;
+            }
+            List<string> messagelist = this.decision(content, command, predicts);
             return messagelist;
         }
 
@@ -102,7 +107,7 @@ namespace Bot_package
             {
                 outputmessage += mesage;
             }
-            return outputmessage + "|";
+            return outputmessage;
         }
     }
 }
