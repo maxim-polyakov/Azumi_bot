@@ -105,7 +105,7 @@ namespace Bot_package
             {
                 outputmessage += mesage;
             }
-            return outputmessage;
+            return outputmessage + " ";
         }
     }
 }
