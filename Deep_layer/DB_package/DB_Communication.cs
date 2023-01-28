@@ -13,7 +13,7 @@ namespace DB_Bridge
     {
         public void insert_to(string insert, string tablename)
         {
-            var cs = new Connections().cs;
+            var cs = new Connections().cs_remote;
             var dataSource = NpgsqlDataSource.Create(cs);
             var countrows = 0;
             using (var cmd = dataSource.CreateCommand("select count(text) from " + tablename ))
@@ -45,7 +45,7 @@ namespace DB_Bridge
                             "select * FROM train_sets.all_set_weather" +
                             " order by agendaid asc";
 
-            var cs = new Connections().cs;
+            var cs = new Connections().cs_remote;
             var dataSource = NpgsqlDataSource.Create(cs);
             int id = 1;
 
@@ -98,7 +98,7 @@ namespace DB_Bridge
 
         public Dictionary<int, string> get_data(string select)
         {
-            var cs = new Connections().cs;
+            var cs = new Connections().cs_remote;
             var dataSource = NpgsqlDataSource.Create(cs);
             var command = dataSource.CreateCommand(select);
             var reader = command.ExecuteReader();
@@ -117,7 +117,7 @@ namespace DB_Bridge
 
         public bool checkcommands(string input_string)
         {
-            var cs = new Connections().cs;
+            var cs = new Connections().cs_remote;
             var conn = new NpgsqlConnection(cs);
             conn.Open();
             var cmd = new NpgsqlCommand();
