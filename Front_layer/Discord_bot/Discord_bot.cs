@@ -17,8 +17,9 @@ namespace Discord_bot
         {
             client = new DiscordSocketClient();
             client.MessageReceived += CommandHandler;
-
-            var token = "MTA0ODQ5NTY4MDQ3OTU4MDIzMA.GTwzpX.QC_3z-50mLPgeqrEvtM0lA0gsl_MTlNi-zEPPM";
+            IToken token_maker = new Bot_package.Token();
+            var token = token_maker.get_token("select token from assistant_sets.tokens where botname = \'Azumi\' and platformname = \'Discord\'");
+            //var token = "MTA0ODQ5NTY4MDQ3OTU4MDIzMA.GTwzpX.QC_3z-50mLPgeqrEvtM0lA0gsl_MTlNi-zEPPM";
 
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();

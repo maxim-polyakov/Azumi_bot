@@ -2,14 +2,16 @@
 using Telegram.Bot.Extensions.Polling;
 using Telegram.Bot.Types;
 using Bot_package;
+using Newtonsoft.Json.Linq;
 
 namespace TelegramBot
 {
-
     class TelegramBot
     {
-        
-        private static ITelegramBotClient bot = new TelegramBotClient("5652073179:AAHe5vkozr5L8vW-Wz9fw-lJmoOiCbIyaCE");
+        private static IToken token_maker = new Bot_package.Token();
+
+        private static ITelegramBotClient bot = new TelegramBotClient(token_maker.get_token("select token from assistant_sets.tokens where botname = \'Azumi\' and platformname = \'Telegram\'"));
+
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             if(update.Type == Telegram.Bot.Types.Enums.UpdateType.Message)

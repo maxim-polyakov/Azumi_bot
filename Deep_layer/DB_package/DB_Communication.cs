@@ -32,6 +32,23 @@ namespace DB_Bridge
             }
         }
 
+        public string get_token(string select)
+        {
+            var cs = new Connections().cs_remote;
+            var dataSource = NpgsqlDataSource.Create(cs);
+            string token = string.Empty;
+            using (var cmd = dataSource.CreateCommand(select))
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    token = reader.GetString(0);
+                }
+            }    
+
+            return token;
+        }
+
         public DataFrame get_data()
         {
             string select = "select * FROM train_sets.all_set_thanks" +
@@ -154,5 +171,6 @@ namespace DB_Bridge
             }
             return false;
         }
+
     }
 }
