@@ -2,7 +2,7 @@
 
 # Azumi_bot
 
-Misa_bot is a three-layer architecture python application
+Azumi_bot is a three-layer architecture python application
 
   ## Front layer
 
@@ -10,9 +10,9 @@ Misa_bot is a three-layer architecture python application
   
   The functional paradigm is realeased in a Front layert. Front layer doesnt comprise entityes, it comprises only functions for implementation commands.
   
-    1) telegram
+    1) TelegramBot
           
-    2) discord
+    2) Discord_bot
     
     
   ## Core layer
@@ -29,10 +29,9 @@ Misa_bot is a three-layer architecture python application
     
        Bot_package contains the next entityes:
        
-          a) ITrain
-          b) ICleaner
-          c) IMonitor
-          d) IAnalyzer
+          a) IToken
+          b) IMonitor
+
         
         
     3) Command_package - this package is created to implement the command's action logic.
@@ -70,21 +69,14 @@ Misa_bot is a three-layer architecture python application
     
        NLP_package contains the next entityes:
        
-          a) IDataShower
-          b) IGpt
-          c) IModel
-          d) IPredictor
-          e) ISaver
-          f) IPreprocessing
-          g) ITokenizer
+          a) IPredictor
 
-  and 2 folders
+
+  and 1 folder
   
-    1) models
-       models contains the text types of models
+    1) Models
+       Models contains the text types of models
           a) LSTM - the recurent model with a memory https://medium.com/mlearning-ai/the-classification-of-text-messages-using-lstm-bi-lstm-and-gru-f79b207f90ad
-          
-    2) tokenizers
-          a) The tokenizer for this LSTM model
+
           
 Also architecture contains SistersMemory - general database which contains samples for models' trainings for all chat_bots which hosted in       https://console.neon.tech/.
