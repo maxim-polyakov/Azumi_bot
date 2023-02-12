@@ -1,8 +1,8 @@
-![plot](https://github.com/maxim-polyakov/Misa_bot/blob/train_dev_branch/Misa_architecture.png)
+![plot](https://github.com/maxim-polyakov/Azumi_bot/blob/main/Azumi_architecture.png)
 
 # Azumi_bot
 
-Azumi_bot is a three-layer architecture python application
+Azumi_bot is a three-layer architecture C# .Net application.
 
   ## Front layer
 
@@ -44,8 +44,8 @@ Azumi_bot is a three-layer architecture python application
     4) Test_package - this package is created as for testing all application's entities. 
        
        Test package contains the next entityes:
-         a) ITestCase
-         b) ITestMonitor
+       
+         a) ITester
 
   ## Deep layer
 
@@ -76,7 +76,7 @@ Azumi_bot is a three-layer architecture python application
   
     1) Models
        Models contains the text types of models
-          a) LSTM - the recurent model with a memory https://medium.com/mlearning-ai/the-classification-of-text-messages-using-lstm-bi-lstm-and-gru-f79b207f90ad
-
+          a) Transformer - the transformer model represents encoder-decoder structure but does not rely on recurrence and convolutions in order to generate an output. 
+             https://machinelearningmastery.com/the-transformer-model/
           
 Also architecture contains SistersMemory - general database which contains samples for models' trainings for all chat_bots which hosted in       https://console.neon.tech/.
