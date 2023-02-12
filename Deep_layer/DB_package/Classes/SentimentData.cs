@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.Analysis;
 
-namespace DB_Bridge
+namespace DB_package
 {
     public class SentimentData
     {

@@ -1,4 +1,4 @@
-﻿namespace API_package.Finders
+﻿namespace API_package
 {
     public interface IFinder
     {

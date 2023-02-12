@@ -6,7 +6,7 @@ using Microsoft.Data.Analysis;
 using System.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace DB_Bridge
+namespace DB_package
 {
 
     public class DB_Communication : IDB_Communication
@@ -16,7 +16,7 @@ namespace DB_Bridge
             var cs = new Connections().cs_remote;
             var dataSource = NpgsqlDataSource.Create(cs);
             var countrows = 0;
-            using (var cmd = dataSource.CreateCommand("select count(text) from " + tablename ))
+            using (var cmd = dataSource.CreateCommand("select count(text) from " + tablename))
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -44,7 +44,7 @@ namespace DB_Bridge
                 {
                     token = reader.GetString(0);
                 }
-            }    
+            }
 
             return token;
         }
@@ -86,13 +86,13 @@ namespace DB_Bridge
                     sd.id.Append(id);
                     sd.text.Append(reader[0].ToString());
                     sd.agenda.Append(reader[1].ToString());
-                    sd.agendaid.Append(Convert.ToBoolean(Int32.Parse(reader[2].ToString())));
-                    sd.hi.Append(Convert.ToBoolean(Int32.Parse(reader[3].ToString())));
-                    sd.business.Append(Convert.ToBoolean(Int32.Parse(reader[4].ToString())));
-                    sd.weather.Append(Convert.ToBoolean(Int32.Parse(reader[5].ToString())));
-                    sd.thanks.Append(Convert.ToBoolean(Int32.Parse(reader[6].ToString())));
-                    sd.emotionid.Append(Convert.ToBoolean(Int32.Parse(reader[7].ToString())));
-                    sd.trash.Append(Convert.ToBoolean(Int32.Parse(reader[8].ToString())));
+                    sd.agendaid.Append(Convert.ToBoolean(int.Parse(reader[2].ToString())));
+                    sd.hi.Append(Convert.ToBoolean(int.Parse(reader[3].ToString())));
+                    sd.business.Append(Convert.ToBoolean(int.Parse(reader[4].ToString())));
+                    sd.weather.Append(Convert.ToBoolean(int.Parse(reader[5].ToString())));
+                    sd.thanks.Append(Convert.ToBoolean(int.Parse(reader[6].ToString())));
+                    sd.emotionid.Append(Convert.ToBoolean(int.Parse(reader[7].ToString())));
+                    sd.trash.Append(Convert.ToBoolean(int.Parse(reader[8].ToString())));
                     id++;
                 }
             }
