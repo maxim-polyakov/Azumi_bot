@@ -2,6 +2,9 @@
 using Answer_package;
 using Command_package;
 using DB_package;
+using System.Collections.Generic;
+using System;
+using System.IO;
 
 namespace Bot_package
 {
@@ -10,7 +13,7 @@ namespace Bot_package
         private static IPredictor predictor = new Predictor();
         private static IDB_Communication bridge = new DB_Communication();
         private static IAnswer answ = new RandomAnswer();
-        private static ListMaps listMaps= new ListMaps();
+        private static ListMaps listMaps = new ListMaps();
         protected string content { get; set; }
 
         private string classify(string chosen_item)
@@ -53,7 +56,7 @@ namespace Bot_package
             {
                 outlist.Add(command.commandanalyse(text_message));
             }
-            else if(text_message.Contains('?'))
+            else if (text_message.Contains('?'))
             {
                 foreach (string predict in predicts)
                 {
@@ -82,10 +85,10 @@ namespace Bot_package
 
             string[] predicts = new string[CountFiles];
             int i = 0;
-            List<Dictionary<bool, string>>  maplist = listMaps.GetListMaps();
+            List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
 
             foreach (string model in models)
-            {   
+            {
                 predicts[i] = predictor.predict(content, model, maplist[i]);
                 i++;
             }

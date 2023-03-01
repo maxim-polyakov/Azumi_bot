@@ -1,4 +1,8 @@
-﻿namespace API_package
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace API_package
 {
     public interface ITranslator
     {
@@ -7,3 +11,4 @@
         public string translate(string dataselect, string insertdtname);
     }
 }
+

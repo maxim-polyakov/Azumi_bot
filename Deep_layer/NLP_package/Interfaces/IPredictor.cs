@@ -1,4 +1,6 @@
-﻿namespace NLP_package
+﻿using System.Collections.Generic;
+
+namespace NLP_package
 {
     public interface IPredictor
     {

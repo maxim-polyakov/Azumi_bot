@@ -1,4 +1,6 @@
-﻿namespace API_package
+﻿using System;
+
+namespace API_package
 {
     public class GoogleTranslator : ITranslator
     {

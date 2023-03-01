@@ -1,4 +1,6 @@
 ﻿using Microsoft.Data.Analysis;
+using System.Collections.Generic;
+
 namespace DB_package
 {
     public interface IDB_Communication

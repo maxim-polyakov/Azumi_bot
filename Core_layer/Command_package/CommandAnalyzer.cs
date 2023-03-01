@@ -10,7 +10,7 @@
         }
         public string commandanalyse(string command)
         {
-            throw new NotImplementedException();
+            return "";
         }
     }
 }

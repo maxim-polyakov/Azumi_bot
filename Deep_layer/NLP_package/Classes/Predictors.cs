@@ -1,4 +1,6 @@
 ﻿using Microsoft.ML;
+using System.Collections.Generic;
+using System;
 
 namespace NLP_package
 {

@@ -1,8 +1,12 @@
 ﻿using Telegram.Bot;
-using Telegram.Bot.Extensions.Polling;
+using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Bot_package;
 using Newtonsoft.Json.Linq;
+using Microsoft.VisualBasic;
+using System.Threading.Tasks;
+using System.Threading;
+using System;
 
 namespace TelegramBot
 {
@@ -14,7 +18,7 @@ namespace TelegramBot
 
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
-            if(update.Type == Telegram.Bot.Types.Enums.UpdateType.Message)
+            if (update.Type == Telegram.Bot.Types.Enums.UpdateType.Message)
             {
                 var message = update.Message;
                 if (message.Text != null)

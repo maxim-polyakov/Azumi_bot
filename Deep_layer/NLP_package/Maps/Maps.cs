@@ -1,4 +1,6 @@
-﻿namespace NLP_package
+﻿using System.Collections.Generic;
+
+namespace NLP_package
 {
     public class Maps
     {
@@ -29,7 +31,7 @@
         };
     }
 
-    public class ListMaps:Maps
+    public class ListMaps : Maps
     {
         public List<Dictionary<bool, string>> GetListMaps()
         {

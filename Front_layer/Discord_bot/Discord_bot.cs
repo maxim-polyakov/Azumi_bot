@@ -1,13 +1,16 @@
 ﻿using Discord;
 using Discord.WebSocket;
 using Bot_package;
+using System.Threading.Tasks;
+using System.Threading;
+using System;
 
 namespace Discord_bot
 {
-    
+
     class Discord_bot
     {
-        
+
         private DiscordSocketClient client = new DiscordSocketClient();
 
         static void Main(string[] args)

@@ -2,7 +2,7 @@
 {
     internal class Connections
     {
-        public string cs_remote { get;}
+        public string cs_remote { get; }
 
         public Connections()
         {
