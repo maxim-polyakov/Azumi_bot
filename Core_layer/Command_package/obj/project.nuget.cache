@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "W79L4GpKHkAdkmDev4yihk5/qqMGEtsPd9arFJzD4ZYYXgCPV/PjYBKNdsgTAQG/PEyvLc6MD8iPKXy+USUzsw==",
+  "success": true,
+  "projectFilePath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/Command_package.csproj",
+  "expectedPackageFiles": [
+    "/home/baxic/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/home/baxic/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

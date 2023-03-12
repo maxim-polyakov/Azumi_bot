@@ -1,0 +1,10 @@
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/bin/Debug/netcoreapp3.1/NLP_package.deps.json
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/bin/Debug/netcoreapp3.1/NLP_package.dll
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/bin/Debug/netcoreapp3.1/NLP_package.pdb
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/Debug/netcoreapp3.1/NLP_package.csproj.AssemblyReference.cache
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/Debug/netcoreapp3.1/NLP_package.GeneratedMSBuildEditorConfig.editorconfig
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/Debug/netcoreapp3.1/NLP_package.AssemblyInfoInputs.cache
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/Debug/netcoreapp3.1/NLP_package.AssemblyInfo.cs
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/Debug/netcoreapp3.1/NLP_package.csproj.CoreCompileInputs.cache
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/Debug/netcoreapp3.1/NLP_package.dll
+/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/Debug/netcoreapp3.1/NLP_package.pdb

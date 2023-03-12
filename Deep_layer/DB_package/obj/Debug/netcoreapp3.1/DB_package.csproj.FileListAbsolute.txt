@@ -1,0 +1,10 @@
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/DB_package.deps.json
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/DB_package.dll
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/DB_package.pdb
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/Debug/netcoreapp3.1/DB_package.csproj.AssemblyReference.cache
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/Debug/netcoreapp3.1/DB_package.GeneratedMSBuildEditorConfig.editorconfig
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/Debug/netcoreapp3.1/DB_package.AssemblyInfoInputs.cache
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/Debug/netcoreapp3.1/DB_package.AssemblyInfo.cs
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/Debug/netcoreapp3.1/DB_package.csproj.CoreCompileInputs.cache
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/Debug/netcoreapp3.1/DB_package.dll
+/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/Debug/netcoreapp3.1/DB_package.pdb
