@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {}
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {}
   },
   "projects": {
-    "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
         "projectName": "Answer_package",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
-                "projectPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
               }
             }
           }
@@ -47,8 +47,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -67,18 +66,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
         "projectName": "DB_package",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -120,8 +119,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -140,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     }

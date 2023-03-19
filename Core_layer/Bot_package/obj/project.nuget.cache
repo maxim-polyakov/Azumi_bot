@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XRVYC5l499AAkOgBSUZyX08xytGDJBcy/MAiTWB5URV9QnA6RynPCc/8SecUyUqFPQpppH/2HiuBhvmH5TTtzg==",
+  "dgSpecHash": "R2O5z9zHSRkH/DC2pdFeZccjH4Z02ageq1PewvgfukPck6RjNnKKxUQRMubzACvDHZVpJIGvklOO8NPM0IBqpw==",
   "success": true,
-  "projectFilePath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
+  "projectFilePath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
   "expectedPackageFiles": [
     "/home/baxic/.nuget/packages/apache.arrow/2.0.0/apache.arrow.2.0.0.nupkg.sha512",
     "/home/baxic/.nuget/packages/microsoft.data.analysis/0.20.1/microsoft.data.analysis.0.20.1.nupkg.sha512",

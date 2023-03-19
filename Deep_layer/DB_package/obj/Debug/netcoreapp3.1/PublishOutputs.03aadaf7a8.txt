@@ -1,0 +1,10 @@
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/DB_package.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/DB_package.deps.json
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/DB_package.pdb
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/Apache.Arrow.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/Microsoft.Data.Analysis.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.Abstractions.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/Microsoft.ML.DataView.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/Npgsql.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/System.Diagnostics.DiagnosticSource.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/bin/Debug/netcoreapp3.1/publish/System.Runtime.CompilerServices.Unsafe.dll

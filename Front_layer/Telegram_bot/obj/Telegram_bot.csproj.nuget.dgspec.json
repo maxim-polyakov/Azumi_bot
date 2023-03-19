@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/baxic/Desktop/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj": {}
+    "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj": {}
   },
   "projects": {
-    "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
         "projectName": "Answer_package",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
-                "projectPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
               }
             }
           }
@@ -47,8 +47,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -67,18 +66,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/baxic/Desktop/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
         "projectName": "Bot_package",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Bot_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -93,17 +92,17 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
-                "projectPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj"
               },
-              "/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/Command_package.csproj": {
-                "projectPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/Command_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj"
               },
-              "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
-                "projectPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
               },
-              "/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj": {
-                "projectPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj"
               }
             }
           }
@@ -123,8 +122,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -143,18 +141,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/Command_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/Command_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj",
         "projectName": "Command_package",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/Command_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -186,8 +184,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -206,18 +203,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
         "projectName": "DB_package",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/DB_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -259,8 +256,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -279,18 +275,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
         "projectName": "NLP_package",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -328,8 +324,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -348,34 +343,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/baxic/Desktop/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Desktop/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj",
         "projectName": "Telegram_bot",
-        "projectPath": "/home/baxic/Desktop/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Desktop/Azumi_bot/Front_layer/Telegram_bot/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Telegram_bot/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/baxic/Desktop/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj": {
-                "projectPath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj"
               }
             }
           }
@@ -387,8 +382,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Telegram.Bot": {
               "target": "Package",
@@ -401,8 +396,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -411,7 +405,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     }

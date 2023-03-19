@@ -1,8 +1,8 @@
-﻿namespace Command_package
+namespace Command_package
 {
     public class CommandAnalyzer : ICommandAnalyzer
-    {
-        private string content;
+        {
+            private string content;
 
         public CommandAnalyzer(string content)
         {

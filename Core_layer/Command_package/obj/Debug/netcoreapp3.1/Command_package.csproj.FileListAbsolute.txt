@@ -8,3 +8,13 @@
 /home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.csproj.CoreCompileInputs.cache
 /home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.dll
 /home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.pdb
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/bin/Debug/netcoreapp3.1/Command_package.deps.json
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/bin/Debug/netcoreapp3.1/Command_package.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/bin/Debug/netcoreapp3.1/Command_package.pdb
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.csproj.AssemblyReference.cache
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.GeneratedMSBuildEditorConfig.editorconfig
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.AssemblyInfoInputs.cache
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.AssemblyInfo.cs
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.csproj.CoreCompileInputs.cache
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/Debug/netcoreapp3.1/Command_package.pdb

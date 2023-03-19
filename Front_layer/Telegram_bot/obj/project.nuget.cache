@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fu5LQ8KVUbjzSXg2vCw8GKSqW4tgfdwgAxdOByVJp2NaXxm7P/gYulE/ZGl4S5FodfRfzEdJlW8Xk74WFckyig==",
+  "dgSpecHash": "RQSbfIW9/F8Z1rK6SWB6nzahYyzRxfOtlwwqrwqw3ZNxF2PF6jMU5Q6ld5xVw6iUPXXTDMDqeDt1ZZZ6tIzKAA==",
   "success": true,
-  "projectFilePath": "/home/baxic/Desktop/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj",
+  "projectFilePath": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Telegram_bot/Telegram_bot.csproj",
   "expectedPackageFiles": [
     "/home/baxic/.nuget/packages/apache.arrow/2.0.0/apache.arrow.2.0.0.nupkg.sha512",
     "/home/baxic/.nuget/packages/microsoft.data.analysis/0.20.1/microsoft.data.analysis.0.20.1.nupkg.sha512",

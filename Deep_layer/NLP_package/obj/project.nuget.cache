@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l/jv7nKRniTBUwH0m5McEpvlq+7U7R10l71edmFH84WVhjUtGbLEBPNA5Dq81BxGyXYJa+kwVWAi1No3gLZCPg==",
+  "dgSpecHash": "VX4T7xETiPGGehrV+Y2q8+YYq6dBEeBqX4iERjmETPqxzHVDgFrxM5+zkAYB1tUNEYAMKnUWo7EBsnhUrREdhw==",
   "success": true,
-  "projectFilePath": "/home/baxic/Desktop/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
+  "projectFilePath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
   "expectedPackageFiles": [
     "/home/baxic/.nuget/packages/microsoft.ml/2.0.1/microsoft.ml.2.0.1.nupkg.sha512",
     "/home/baxic/.nuget/packages/microsoft.ml.cpumath/2.0.1/microsoft.ml.cpumath.2.0.1.nupkg.sha512",
