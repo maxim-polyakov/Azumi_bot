@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qn6NL7NCv7b4BEupLREfxKJRgY+P7uA827wRhkURJOIo6SgtL12k7myuz6eeCe+0p7rqhuUSRTW9vgcTsnbXug==",
+  "dgSpecHash": "u60qia8jsSWw/Q6WkODS8oWA6ifeyFH5Rb0BKQtBj376dl33HVdIdn2kdKYYKyPHReHv+EAqfUMatdc/RkDnLg==",
   "success": true,
-  "projectFilePath": "/home/baxic/Desktop/Azumi_bot/Core_layer/Test_package/Test_package.csproj",
+  "projectFilePath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Test_package/Test_package.csproj",
   "expectedPackageFiles": [
     "/home/baxic/.nuget/packages/apache.arrow/2.0.0/apache.arrow.2.0.0.nupkg.sha512",
     "/home/baxic/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
