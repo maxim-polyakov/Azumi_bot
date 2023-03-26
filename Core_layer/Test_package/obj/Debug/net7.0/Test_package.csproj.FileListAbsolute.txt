@@ -1,5 +1,0 @@
-/home/baxic/Desktop/Azumi_bot/Core_layer/Test_package/obj/Debug/net7.0/Test_package.csproj.AssemblyReference.cache
-/home/baxic/Desktop/Azumi_bot/Core_layer/Test_package/obj/Debug/net7.0/Test_package.GeneratedMSBuildEditorConfig.editorconfig
-/home/baxic/Desktop/Azumi_bot/Core_layer/Test_package/obj/Debug/net7.0/Test_package.AssemblyInfoInputs.cache
-/home/baxic/Desktop/Azumi_bot/Core_layer/Test_package/obj/Debug/net7.0/Test_package.AssemblyInfo.cs
-/home/baxic/Desktop/Azumi_bot/Core_layer/Test_package/obj/Debug/net7.0/Test_package.csproj.CoreCompileInputs.cache

@@ -1,3 +1,0 @@
-/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/bin/Debug/netcoreapp3.1/publish/Command_package.dll
-/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/bin/Debug/netcoreapp3.1/publish/Command_package.deps.json
-/home/baxic/Desktop/Azumi_bot/Core_layer/Command_package/bin/Debug/netcoreapp3.1/publish/Command_package.pdb
