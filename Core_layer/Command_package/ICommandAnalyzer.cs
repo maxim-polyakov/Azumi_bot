@@ -1,4 +1,4 @@
-﻿namespace Command_package
+﻿﻿namespace Command_package
 {
     public interface ICommandAnalyzer
     {

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace NLP_package
 {
@@ -45,4 +45,3 @@ namespace NLP_package
         }
     }
 }
-

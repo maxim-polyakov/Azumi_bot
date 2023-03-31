@@ -1,12 +1,15 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+WORKDIR /App
 
-FROM microsoft/aspnetcore:2.0 AS base
-WORKDIR /app
-EXPOSE 80
+# Copy everything
+COPY . ./
+# Restore as distinct layers
+RUN dotnet restore
+# Build and publish a release
+RUN dotnet publish -c Release -r ubuntu.22.10-x64 --self-contained
 
-FROM microsoft/aspnetcore-build:2.0 AS build
-WORKDIR /src
-
-RUN dotnet build DockerServiceDemo.csproj -c Release -o /appsnap start docker
-
-ADD run.sh /
-ENTRYPOINT ["/bin/sh", "/run.sh"]
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+WORKDIR /App
+COPY --from=build-env /App/out .
+ENTRYPOINT ["dotnet", "Discord_bot"]
