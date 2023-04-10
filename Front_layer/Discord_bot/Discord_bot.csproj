@@ -5,14 +5,15 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Nullable>enable</Nullable>
+    <OutputPath>..\..\AppData\</OutputPath>
+      <!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Discord.Net.Core" Version="3.10.0" />
     <PackageReference Include="Discord.Net.WebSocket" Version="3.10.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Core_layer\Bot_package\Bot_package.csproj" />
   </ItemGroup>
 
