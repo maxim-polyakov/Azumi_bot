@@ -48,6 +48,7 @@ namespace TelegramBot
                 receiverOptions,
                 cancellationToken
             );
+            Console.WriteLine("Ready");
             Console.ReadLine();
         }
     }
