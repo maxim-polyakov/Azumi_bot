@@ -31,7 +31,6 @@ namespace Discord_bot
 
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();
-            Console.ReadLine();
         }
 
 
