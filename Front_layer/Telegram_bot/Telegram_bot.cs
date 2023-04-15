@@ -2,6 +2,7 @@
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Bot_package;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
 using Microsoft.VisualBasic;
 using System.Threading.Tasks;
@@ -34,21 +35,26 @@ namespace TelegramBot
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
         }
 
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var cts = new CancellationTokenSource();
-            var cancellationToken = cts.Token;
-            var receiverOptions = new ReceiverOptions
+            var hostBuilder = new HostBuilder()
+             // Add configuration, logging, ...
+            .ConfigureServices((hostContext, services) =>
             {
-                AllowedUpdates = { },
-            };
-            bot.StartReceiving(
-                HandleUpdateAsync,
-                HandleErrorAsync,
-                receiverOptions,
-                cancellationToken
-            );
-            Console.ReadLine();
+                var cts = new CancellationTokenSource();
+                var cancellationToken = cts.Token;
+                var receiverOptions = new ReceiverOptions
+                {
+                    AllowedUpdates = { },
+                };
+                bot.StartReceiving(
+                    HandleUpdateAsync,
+                    HandleErrorAsync,
+                    receiverOptions,
+                    cancellationToken
+                );
+            });
+            await hostBuilder.RunConsoleAsync();
         }
     }
 }

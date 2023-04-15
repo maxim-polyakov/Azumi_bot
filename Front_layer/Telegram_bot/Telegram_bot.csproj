@@ -11,6 +11,9 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core_layer\Bot_package\Bot_package.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
     <PackageReference Include="Telegram.Bot" Version="18.0.0" />
   </ItemGroup>
 
