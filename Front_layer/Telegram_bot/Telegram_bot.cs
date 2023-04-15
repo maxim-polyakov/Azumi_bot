@@ -1,4 +1,4 @@
-﻿using Telegram.Bot;
+﻿﻿using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Bot_package;
@@ -40,7 +40,7 @@ namespace TelegramBot
             var cancellationToken = cts.Token;
             var receiverOptions = new ReceiverOptions
             {
-                AllowedUpdates = { },
+                    AllowedUpdates = { },
             };
             bot.StartReceiving(
                 HandleUpdateAsync,
@@ -48,8 +48,7 @@ namespace TelegramBot
                 receiverOptions,
                 cancellationToken
             );
-            Console.WriteLine("Ready");
-            Console.ReadLine();
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

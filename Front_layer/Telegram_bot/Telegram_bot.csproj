@@ -1,14 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-      <OutputPath>..\..\AppData\</OutputPath>
+    <Nullable>enable</Nullable>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <OutputPath>..\..\AppData\</OutputPath>
       <!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
-     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>    
   </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\Core_layer\Bot_package\Bot_package.csproj" />
     <PackageReference Include="Telegram.Bot" Version="18.0.0" />

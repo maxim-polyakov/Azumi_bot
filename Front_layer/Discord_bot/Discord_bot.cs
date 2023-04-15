@@ -1,4 +1,4 @@
-using Discord;
+﻿using Discord;
 using Discord.WebSocket;
 using Bot_package;
 
@@ -11,9 +11,13 @@ namespace Discord_bot
         private DiscordSocketClient client = new DiscordSocketClient();
 
         static void Main(string[] args)
-            => new Discord_bot().MainAsync().GetAwaiter().GetResult();
+        {
+            new Discord_bot().MainAsync().GetAwaiter().GetResult();
+            System.Threading.Thread.Sleep(1000);
+            
+        }
 
-        async Task MainAsync()
+        public async Task MainAsync()
         {
             client = new DiscordSocketClient();
             client.MessageReceived += CommandHandler;
@@ -22,12 +26,10 @@ namespace Discord_bot
 
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();
-            Console.WriteLine("Ready");
-            Console.ReadLine();
         }
 
 
-        private Task CommandHandler(SocketMessage msg)
+        public Task CommandHandler(SocketMessage msg)
         {
             if (msg.Content != null)
             {
