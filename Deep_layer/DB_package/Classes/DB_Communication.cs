@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using Npgsql;
 using Microsoft.Data.Analysis;
-using System.Threading;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace DB_package
 {
