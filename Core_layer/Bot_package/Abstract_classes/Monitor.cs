@@ -75,20 +75,29 @@ namespace Bot_package
 
         protected List<string> neurodesc(string content, ICommandAnalyzer command)
         {
-            List<string[]> modelPahths = new List<string[]>();
-            string fullPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/Models";
-            int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
-            string[] models = Directory.GetFiles(fullPath);
-            string[] predicts = new string[CountFiles];
-            int i = 0;
-            List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
+            string fullPath = "/Models";
 
-            foreach (string model in models)
+            List<string> messagelist = new List<string>();
+
+            if (!System.IO.Directory.Exists(fullPath))
             {
-                predicts[i] = predictor.predict(content, model, maplist[i]);
-                i++;
-            }
-            List<string> messagelist = this.decision(content, command, predicts);
+                string[] predicts;
+                List<string[]> modelPahths = new List<string[]>();
+
+                int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
+                string[] models = Directory.GetFiles(fullPath);
+                predicts = new string[CountFiles];
+                int i = 0;
+                List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
+
+                foreach (string model in models)
+                {
+                    predicts[i] = predictor.predict(content, model, maplist[i]);
+                    i++;
+                }
+                messagelist = this.decision(content, command, predicts);            
+            }            
+            
             return messagelist;
         }
 

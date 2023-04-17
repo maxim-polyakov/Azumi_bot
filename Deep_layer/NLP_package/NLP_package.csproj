@@ -4,13 +4,16 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
     <OutputPath>..\..\AppData\</OutputPath>
       <!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+   <Content Include="Models\*.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+   </Content>
   </ItemGroup>
 
   <ItemGroup>

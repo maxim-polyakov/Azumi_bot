@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup> 
+    <PackageReference Include="Microsoft.Data.Analysis" Version="0.20.1" /> 
+    <PackageReference Include="MSTest.TestAdapter" Version="3.0.2" /> 
+    <PackageReference Include="MSTest.TestFramework" Version="3.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bot_package\Bot_package.csproj" />
+    <ProjectReference Include="..\Command_package\Command_package.csproj"/>
+    <ProjectReference Include="..\..\Deep_layer\NLP_package\NLP_package.csproj"/>
+    <ProjectReference Include="..\..\Deep_layer\DB_package\DB_package.csproj"/>
+  </ItemGroup>
+</Project>
