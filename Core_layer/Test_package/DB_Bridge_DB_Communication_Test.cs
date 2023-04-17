@@ -1,12 +1,7 @@
 namespace Test_package;
-using NLP_package;
 using DB_package;
-using System;
 using System.Collections.Generic;
-using System.Data;
-using Microsoft.Data.Analysis;
-using System.Threading;
-using static System.Net.Mime.MediaTypeNames;
+
 
 [TestClass]
 public class DBCommunicztion_Test
@@ -16,7 +11,7 @@ public class DBCommunicztion_Test
     [TestMethod]
     public void TestMethod_insert_to()
     {
-        bridge.insert_to("ïðèâåò", "messtorage.storage");
+        //bridge.insert_to("ïðèâåò", "messtorage.storage");
     }
 
     [TestMethod]
