@@ -3,11 +3,6 @@ using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Bot_package;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json.Linq;
-using Microsoft.VisualBasic;
-using System.Threading.Tasks;
-using System.Threading;
-using System;
 
 namespace TelegramBot
 {
