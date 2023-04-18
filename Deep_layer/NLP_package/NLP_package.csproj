@@ -1,23 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
     <OutputPath>..\..\AppData\</OutputPath>
-      <!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
+    <!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
-
   <ItemGroup>
-   <Content Include="Models\*.zip">
+    <Content Include="Models\*.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-   </Content>
+    </Content>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="2.0.1" />
   </ItemGroup>
-
 </Project>
