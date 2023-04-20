@@ -4,6 +4,8 @@ using Command_package;
 using DB_package;
 using System.Collections.Generic;
 using System.IO;
+using System;
+using System.Collections;
 
 namespace Bot_package
 {
@@ -74,16 +76,19 @@ namespace Bot_package
 
         protected List<string> neurodesc(string content, ICommandAnalyzer command)
         {
-            string fullPath = "/Models";
+            Console.WriteLine(Environment.CurrentDirectory);
+            
+            string fullPath = Environment.CurrentDirectory + "/Models";
 
             List<string> messagelist = new List<string>();
 
-            if (!System.IO.Directory.Exists(fullPath))
+            if (System.IO.Directory.Exists(fullPath))
             {
                 string[] predicts;
                 List<string[]> modelPahths = new List<string[]>();
 
                 int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
+                Console.WriteLine(CountFiles);
                 string[] models = Directory.GetFiles(fullPath);
                 predicts = new string[CountFiles];
                 int i = 0;
@@ -112,7 +117,7 @@ namespace Bot_package
             {
                 outputmessage += mesage;
             }
-            return outputmessage + " ";
+            return outputmessage + ".";
         }
     }
 }

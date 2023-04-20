@@ -17,4 +17,3 @@ COPY --from=build /app ./
 EXPOSE 8080
 ADD run.sh /
 ENTRYPOINT ["/bin/sh", "/run.sh"]
-CMD ["runserver","0.0.0.0:8000"]

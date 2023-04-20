@@ -11,15 +11,14 @@ namespace Discord_bot
         
         private DiscordSocketClient client = new DiscordSocketClient();
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {   
-            var hostBuilder = new HostBuilder()
+            await Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {    
                 new Discord_bot().MainAsync().GetAwaiter().GetResult();
-            });
-            
-            hostBuilder.RunConsoleAsync();
+            })
+            .RunConsoleAsync();
         }
 
         async Task MainAsync()

@@ -26,14 +26,12 @@ namespace TelegramBot
         }
         public static async Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
-
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
         }
 
         public static async Task Main(string[] args)
         {
-            var hostBuilder = new HostBuilder()
-             // Add configuration, logging, ...
+            await Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {
                 var cts = new CancellationTokenSource();
@@ -48,8 +46,7 @@ namespace TelegramBot
                     receiverOptions,
                     cancellationToken
                 );
-            });
-            await hostBuilder.RunConsoleAsync();
+            }).RunConsoleAsync();
         }
     }
 }
