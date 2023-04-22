@@ -20,7 +20,8 @@ namespace TelegramBot
                 if (message.Text != null)
                 {
                     IMonitor mmt = new MessageMonitorTelegram(message.Text);
-                    await botClient.SendTextMessageAsync(message.Chat, mmt.monitor());
+                    if(mmt.monitor() != string.Empty)
+                        await botClient.SendTextMessageAsync(message.Chat, mmt.monitor());
                 }
             }
         }

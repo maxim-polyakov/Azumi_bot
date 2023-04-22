@@ -40,7 +40,8 @@ namespace Discord_bot
                 IMonitor mmd = new MessageMonitorDiscord(msg.Content);
                 if (!msg.Author.IsBot)
                 {
-                    msg.Channel.SendMessageAsync(mmd.monitor());
+                    if(mmd.monitor() != string.Empty)
+                        msg.Channel.SendMessageAsync(mmd.monitor());
                 }
             }
             return Task.CompletedTask;
