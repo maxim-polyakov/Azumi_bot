@@ -52,7 +52,6 @@ namespace Bot_package
         private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts)
         {
             List<string> outlist = new List<string>();
-
             if (bridge.checkcommands(text_message))
             {
                 outlist.Add(command.commandanalyse(text_message));
@@ -110,12 +109,16 @@ namespace Bot_package
             bridge.insert_to(content, "messtorage.storage");
             string outputmessage = string.Empty;
 
-            List<string> messagelist = this.neurodesc(content, command);
-
-            foreach (string mesage in messagelist)
+            if ((this.content.ToLower()).Contains("азуми"))
             {
-                outputmessage += mesage;
+                List<string> messagelist = this.neurodesc(content, command);
+
+                foreach (string mesage in messagelist)
+                {
+                    outputmessage += mesage;
+                }
             }
+
             return outputmessage;
         }
     }
