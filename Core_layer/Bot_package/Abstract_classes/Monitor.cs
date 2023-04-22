@@ -76,7 +76,6 @@ namespace Bot_package
 
         protected List<string> neurodesc(string content, ICommandAnalyzer command)
         {
-            Console.WriteLine(Environment.CurrentDirectory);
             
             string fullPath = Environment.CurrentDirectory + "/Models";
 
@@ -88,7 +87,6 @@ namespace Bot_package
                 List<string[]> modelPahths = new List<string[]>();
 
                 int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
-                Console.WriteLine(CountFiles);
                 string[] models = Directory.GetFiles(fullPath);
                 predicts = new string[CountFiles];
                 int i = 0;
@@ -102,6 +100,8 @@ namespace Bot_package
                 messagelist = this.decision(content, command, predicts);            
             }            
             
+            messagelist.Add("Нет классификации");
+
             return messagelist;
         }
 
