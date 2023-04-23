@@ -1,5 +1,6 @@
-﻿using Discord;
+using Discord;
 using Discord.WebSocket;
+using Microsoft.Extensions.Hosting;
 using Bot_package;
 
 namespace Discord_bot
@@ -10,14 +11,17 @@ namespace Discord_bot
         
         private DiscordSocketClient client = new DiscordSocketClient();
 
-        static void Main(string[] args)
-        {
-            new Discord_bot().MainAsync().GetAwaiter().GetResult();
-            System.Threading.Thread.Sleep(1000);
-            
+        static async Task Main(string[] args)
+        {   
+            await Host.CreateDefaultBuilder(args)
+            .ConfigureServices((hostContext, services) =>
+            {    
+                new Discord_bot().MainAsync().GetAwaiter().GetResult();
+            })
+            .RunConsoleAsync();
         }
 
-        public async Task MainAsync()
+        async Task MainAsync()
         {
             client = new DiscordSocketClient();
             client.MessageReceived += CommandHandler;
@@ -29,14 +33,15 @@ namespace Discord_bot
         }
 
 
-        public Task CommandHandler(SocketMessage msg)
+        private Task CommandHandler(SocketMessage msg)
         {
             if (msg.Content != null)
             {
                 IMonitor mmd = new MessageMonitorDiscord(msg.Content);
                 if (!msg.Author.IsBot)
                 {
-                    msg.Channel.SendMessageAsync(mmd.monitor());
+                    if(mmd.monitor() != string.Empty)
+                        msg.Channel.SendMessageAsync(mmd.monitor());
                 }
             }
             return Task.CompletedTask;

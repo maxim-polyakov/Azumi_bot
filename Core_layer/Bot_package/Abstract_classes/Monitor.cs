@@ -3,8 +3,9 @@ using Answer_package;
 using Command_package;
 using DB_package;
 using System.Collections.Generic;
-using System;
 using System.IO;
+using System;
+using System.Collections;
 
 namespace Bot_package
 {
@@ -51,7 +52,6 @@ namespace Bot_package
         private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts)
         {
             List<string> outlist = new List<string>();
-
             if (bridge.checkcommands(text_message))
             {
                 outlist.Add(command.commandanalyse(text_message));
@@ -74,21 +74,32 @@ namespace Bot_package
         }
 
         protected List<string> neurodesc(string content, ICommandAnalyzer command)
-        {
-            List<string[]> modelPahths = new List<string[]>();
-            string fullPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/Models";
-            int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
-            string[] models = Directory.GetFiles(fullPath);
-            string[] predicts = new string[CountFiles];
-            int i = 0;
-            List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
-
-            foreach (string model in models)
+        {            
+            string fullPath = Environment.CurrentDirectory + "/Models";
+            List<string> messagelist = new List<string>();
+            if (System.IO.Directory.Exists(fullPath))
             {
-                predicts[i] = predictor.predict(content, model, maplist[i]);
-                i++;
+                string[] predicts;
+                List<string[]> modelPahths = new List<string[]>();
+
+                int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
+                string[] models = Directory.GetFiles(fullPath);
+                predicts = new string[CountFiles];
+                int i = 0;
+                List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
+
+                foreach (string model in models)
+                {
+                    predicts[i] = predictor.predict(content, model, maplist[i]);
+                    i++;
+                }
+                messagelist = this.decision(content, command, predicts);            
             }
-            List<string> messagelist = this.decision(content, command, predicts);
+            else
+            {
+                messagelist.Add("Нет классификации");
+            }       
+            
             return messagelist;
         }
 
@@ -98,13 +109,17 @@ namespace Bot_package
             bridge.insert_to(content, "messtorage.storage");
             string outputmessage = string.Empty;
 
-            List<string> messagelist = this.neurodesc(content, command);
-
-            foreach (string mesage in messagelist)
+            if ((this.content.ToLower()).Contains("азуми"))
             {
-                outputmessage += mesage;
+                List<string> messagelist = this.neurodesc(content, command);
+
+                foreach (string mesage in messagelist)
+                {
+                    outputmessage += mesage;
+                }
             }
-            return outputmessage + " ";
+
+            return outputmessage;
         }
     }
 }

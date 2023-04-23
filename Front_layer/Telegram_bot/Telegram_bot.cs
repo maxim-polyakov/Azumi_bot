@@ -1,12 +1,8 @@
-﻿﻿using Telegram.Bot;
+﻿using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Bot_package;
-using Newtonsoft.Json.Linq;
-using Microsoft.VisualBasic;
-using System.Threading.Tasks;
-using System.Threading;
-using System;
+using Microsoft.Extensions.Hosting;
 
 namespace TelegramBot
 {
@@ -24,31 +20,34 @@ namespace TelegramBot
                 if (message.Text != null)
                 {
                     IMonitor mmt = new MessageMonitorTelegram(message.Text);
-                    await botClient.SendTextMessageAsync(message.Chat, mmt.monitor());
+                    if(mmt.monitor() != string.Empty)
+                        await botClient.SendTextMessageAsync(message.Chat, mmt.monitor());
                 }
             }
         }
         public static async Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
-
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
         }
 
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var cts = new CancellationTokenSource();
-            var cancellationToken = cts.Token;
-            var receiverOptions = new ReceiverOptions
+            await Host.CreateDefaultBuilder(args)
+            .ConfigureServices((hostContext, services) =>
             {
+                var cts = new CancellationTokenSource();
+                var cancellationToken = cts.Token;
+                var receiverOptions = new ReceiverOptions
+                {
                     AllowedUpdates = { },
-            };
-            bot.StartReceiving(
-                HandleUpdateAsync,
-                HandleErrorAsync,
-                receiverOptions,
-                cancellationToken
-            );
-            System.Threading.Thread.Sleep(1000);
+                };
+                bot.StartReceiving(
+                    HandleUpdateAsync,
+                    HandleErrorAsync,
+                    receiverOptions,
+                    cancellationToken
+                );
+            }).RunConsoleAsync();
         }
     }
 }
