@@ -32,7 +32,6 @@ namespace Discord_bot
             await client.StartAsync();
         }
 
-
         private Task CommandHandler(SocketMessage msg)
         {
             if (msg.Content != null)

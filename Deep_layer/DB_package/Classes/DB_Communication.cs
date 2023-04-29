@@ -6,7 +6,6 @@ using Microsoft.Data.Analysis;
 
 namespace DB_package
 {
-
     public class DB_Communication : IDB_Communication
     {
         public void insert_to(string insert, string tablename)
@@ -95,7 +94,7 @@ namespace DB_package
                 }
             }
             DataFrameColumn[] columns =
-    {
+            {
                     sd.id,
                     sd.text,
                     sd.agenda,
@@ -126,7 +125,6 @@ namespace DB_package
                 data.Add(i, reader.GetString(0));
                 i++;
             }
-
             return data;
         }
 
