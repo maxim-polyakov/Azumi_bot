@@ -20,7 +20,6 @@ namespace Bot_package
         private string classify(string chosen_item)
         {
             string outstring = string.Empty;
-
             Dictionary<string, string> info_dict = new Dictionary<string, string>()
             {
                 {"Приветствие", answ.answer() + ". "},
@@ -81,13 +80,11 @@ namespace Bot_package
             {
                 string[] predicts;
                 List<string[]> modelPahths = new List<string[]>();
-
                 int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
                 string[] models = Directory.GetFiles(fullPath);
                 predicts = new string[CountFiles];
                 int i = 0;
                 List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
-
                 foreach (string model in models)
                 {
                     predicts[i] = predictor.predict(content, model, maplist[i]);
@@ -98,8 +95,7 @@ namespace Bot_package
             else
             {
                 messagelist.Add("Нет классификации");
-            }       
-            
+            }
             return messagelist;
         }
 
@@ -111,6 +107,8 @@ namespace Bot_package
 
             if ((this.content.ToLower()).Contains("азуми"))
             {
+                content = content.Replace("азуми", "");
+                
                 List<string> messagelist = this.neurodesc(content, command);
 
                 foreach (string mesage in messagelist)
@@ -118,7 +116,6 @@ namespace Bot_package
                     outputmessage += mesage;
                 }
             }
-
             return outputmessage;
         }
     }

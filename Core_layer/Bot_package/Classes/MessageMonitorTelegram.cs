@@ -6,7 +6,6 @@
         {
             base.content = content;
         }
-
         public string monitor() => base.monitor();
     }
 }
