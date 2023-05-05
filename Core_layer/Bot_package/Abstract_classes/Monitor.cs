@@ -13,16 +13,15 @@ namespace Bot_package
     {
         private static IPredictor predictor = new Predictor();
         private static IDB_Communication bridge = new DB_Communication();
-        private static IAnswer answ = new RandomAnswer();
+        private static IAnswer ransw = new RandomAnswer();
         private static ListMaps listMaps = new ListMaps();
         protected string content { get; set; }
-
         private string classify(string chosen_item)
         {
             string outstring = string.Empty;
             Dictionary<string, string> info_dict = new Dictionary<string, string>()
             {
-                {"Приветствие", answ.answer() + ". "},
+                {"Приветствие", ransw.answer() + ". "},
                 {"Благодарность","Не за что."},
                 {"Дело","Утверждение про дела. "},
                 {"Погода","Утверждение про погоду. "},
@@ -30,23 +29,7 @@ namespace Bot_package
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
-        }
-
-        private string classify_question(string chosen_item)
-        {
-            string outstring = string.Empty;
-
-            Dictionary<string, string> info_dict = new Dictionary<string, string>()
-            {
-                {"Приветствие", answ.answer() + ". "},
-                {"Благодарность","Не за что."},
-                {"Дело", "Я в порядке. "},
-                {"Погода", "Погода норм. "},
-                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
-            };
-            info_dict.TryGetValue(chosen_item, out outstring);
-            return outstring;
-        }
+        }      
 
         private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts)
         {
@@ -57,9 +40,11 @@ namespace Bot_package
             }
             else if (text_message.Contains('?'))
             {
+                IAnswer qansw = new QuestionAnswer(text_message);
+
                 foreach (string predict in predicts)
                 {
-                    outlist.Add(classify_question(predict));
+                    outlist.Add(qansw.answer());
                 }
             }
             else
