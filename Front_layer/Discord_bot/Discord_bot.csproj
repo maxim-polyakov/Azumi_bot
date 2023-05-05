@@ -17,5 +17,4 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
     <ProjectReference Include="..\..\Core_layer\Bot_package\Bot_package.csproj" />
   </ItemGroup>
-
 </Project>

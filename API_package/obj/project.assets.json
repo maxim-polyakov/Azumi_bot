@@ -1,0 +1,202 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Calculator/1.0.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/40/Tranform.Try.dll": {}
+        },
+        "runtime": {
+          "lib/40/Tranform.Try.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Wiki.Net/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Wiki.Net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Wiki.Net.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Calculator/1.0.0.1": {
+      "sha512": "lNmy6QR8lB0/eoACl2oUKDbqJ3/n98SZmhQ/SIxJL1SihOru03aB4Q5qf9RStwP2zigPWwQzKCkrm2byLDUXbw==",
+      "type": "package",
+      "path": "calculator/1.0.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ClassLibrary1/App.config",
+        "ClassLibrary1/Calculator.cs",
+        "ClassLibrary1/Properties/AssemblyInfo.cs",
+        "ClassLibrary1/Tranform.Try.csproj",
+        "ClassLibrary1/bin/Debug/Tranform.Try.pdb",
+        "ClassLibrary1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache",
+        "ClassLibrary1/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs",
+        "ClassLibrary1/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs",
+        "ClassLibrary1/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs",
+        "ClassLibrary1/obj/Debug/Tranform.Try.csproj.FileListAbsolute.txt",
+        "ClassLibrary1/obj/Debug/Tranform.Try.pdb",
+        "Tranform.sln",
+        "Tranform.suo",
+        "Tranform.v11.suo",
+        "calculator.1.0.0.1.nupkg.sha512",
+        "calculator.nuspec",
+        "content/web.config.transform",
+        "lib/40/Tranform.Try.dll"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Wiki.Net/4.1.0": {
+      "sha512": "liYW9biyPC0FdsnFs4Un9Qb0Kn+/pA7ZS/d3SbpjU3lqg0dEYw4dAqklWjWYwu8JErybvdbabbx9BdMFk0NPBA==",
+      "type": "package",
+      "path": "wiki.net/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net6.0/Wiki.Net.dll",
+        "lib/net6.0/Wiki.Net.xml",
+        "lib/netstandard2.0/Wiki.Net.dll",
+        "lib/netstandard2.0/Wiki.Net.xml",
+        "wiki.net.4.1.0.nupkg.sha512",
+        "wiki.net.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Calculator >= 1.0.0.1",
+      "Wiki.Net >= 4.1.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/baxic/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/API_package/API_package.csproj",
+      "projectName": "API_package",
+      "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/API_package/API_package.csproj",
+      "packagesPath": "/home/baxic/.nuget/packages/",
+      "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/API_package/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/baxic/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "Calculator": {
+            "target": "Package",
+            "version": "[1.0.0.1, )"
+          },
+          "Wiki.Net": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.105/RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Calculator 1.0.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Calculator",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}
