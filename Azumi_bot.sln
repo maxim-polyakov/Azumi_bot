@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLP_package", "Deep_layer\N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_package", "Core_layer\Test_package\Test_package.csproj", "{A243F653-2421-481F-B8BF-2E7D7BFB1016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_package", "API_package\API_package.csproj", "{248EEA40-1D98-4334-9183-8D4C114BF7AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_package", "Deep_layer\API_package\API_package.csproj", "{248EEA40-1D98-4334-9183-8D4C114BF7AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

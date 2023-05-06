@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/baxic/Documents/GitHub/Azumi_bot/API_package/API_package.csproj": {}
+    "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/API_package.csproj": {}
   },
   "projects": {
-    "/home/baxic/Documents/GitHub/Azumi_bot/API_package/API_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/API_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/API_package/API_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/API_package.csproj",
         "projectName": "API_package",
-        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/API_package/API_package.csproj",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/API_package.csproj",
         "packagesPath": "/home/baxic/.nuget/packages/",
-        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/API_package/obj/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/baxic/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,10 @@
             "Calculator": {
               "target": "Package",
               "version": "[1.0.0.1, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.9, )"
             },
             "Wiki.Net": {
               "target": "Package",
