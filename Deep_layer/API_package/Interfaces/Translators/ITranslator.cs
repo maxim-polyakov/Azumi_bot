@@ -2,6 +2,6 @@ namespace API_package
 {
     public interface ITranslator
     {
-        string TranslateText(string input, string languagePair);
+        string translate(string input, string languagePair);
     }
 }
