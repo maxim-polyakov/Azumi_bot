@@ -2,6 +2,6 @@
 {
     public interface IAnswer
     {
-        string answer();
+        public string answer();
     }
 }
