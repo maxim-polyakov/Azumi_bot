@@ -57,7 +57,7 @@ namespace Bot_package
             }
             else if (text_message.Contains('?'))
             {
-                QuestionAnswer quansw = new QuestionAnswer();
+                QuestionAnswer quansw = new QuestionAnswer(text_message);
                 foreach (string predict in predicts)
                 {
                     outlist.Add(quansw.answer());

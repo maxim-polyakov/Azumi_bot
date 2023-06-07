@@ -30,6 +30,9 @@
             "projectReferences": {
               "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj": {
                 "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj"
+              },
+              "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj": {
+                "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj"
               }
             }
           }
@@ -43,6 +46,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.7.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -356,6 +365,10 @@
             "Microsoft.ML": {
               "target": "Package",
               "version": "[2.0.1, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.7.2, )"
             }
           },
           "imports": [

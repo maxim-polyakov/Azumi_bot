@@ -4,6 +4,6 @@ namespace NLP_package
 {
     public interface IGpt
     {
-        public string generate();
+        public string generate(string text);
     }
 }
