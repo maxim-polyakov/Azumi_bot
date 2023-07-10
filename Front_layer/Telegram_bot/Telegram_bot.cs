@@ -30,7 +30,7 @@ namespace TelegramBot
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
         }
 
-        public static async Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             await Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>

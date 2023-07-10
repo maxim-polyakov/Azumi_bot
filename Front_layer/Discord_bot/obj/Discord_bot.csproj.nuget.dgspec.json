@@ -1,38 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\Discord_bot.csproj": {}
+    "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/Discord_bot.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Azumi_bot\\Core_layer\\Answer_package\\Answer_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Core_layer\\Answer_package\\Answer_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
         "projectName": "Answer_package",
-        "projectPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Answer_package\\Answer_package.csproj",
-        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Answer_package\\obj\\",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj",
+        "packagesPath": "/home/baxic/.nuget/packages/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/baxic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj": {
-                "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
               },
-              "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj": {
-                "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj"
               }
             }
           }
@@ -71,10 +69,6 @@
             {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -82,45 +76,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\maxim\\.dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\Bot_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\Bot_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
         "projectName": "Bot_package",
-        "projectPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\Bot_package.csproj",
-        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\obj\\",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj",
+        "packagesPath": "/home/baxic/.nuget/packages/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/baxic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\GitHub\\Azumi_bot\\Core_layer\\Answer_package\\Answer_package.csproj": {
-                "projectPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Answer_package\\Answer_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Answer_package/Answer_package.csproj"
               },
-              "D:\\GitHub\\Azumi_bot\\Core_layer\\Command_package\\Command_package.csproj": {
-                "projectPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Command_package\\Command_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj"
               },
-              "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj": {
-                "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj"
               },
-              "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj": {
-                "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj"
               }
             }
           }
@@ -153,10 +145,6 @@
             {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -164,28 +152,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\maxim\\.dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GitHub\\Azumi_bot\\Core_layer\\Command_package\\Command_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Core_layer\\Command_package\\Command_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj",
         "projectName": "Command_package",
-        "projectPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Command_package\\Command_package.csproj",
-        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Command_package\\obj\\",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/Command_package.csproj",
+        "packagesPath": "/home/baxic/.nuget/packages/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Command_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/baxic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -232,10 +218,6 @@
             {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -243,28 +225,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\maxim\\.dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
         "projectName": "DB_package",
-        "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\DB_package.csproj",
-        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\DB_package\\obj\\",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/DB_package.csproj",
+        "packagesPath": "/home/baxic/.nuget/packages/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/DB_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/baxic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -311,10 +291,6 @@
             {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -322,28 +298,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\maxim\\.dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
         "projectName": "NLP_package",
-        "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\NLP_package.csproj",
-        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\NLP_package\\obj\\",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/NLP_package.csproj",
+        "packagesPath": "/home/baxic/.nuget/packages/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/NLP_package/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/baxic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -390,10 +364,6 @@
             {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -401,36 +371,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\maxim\\.dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\Discord_bot.csproj": {
+    "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/Discord_bot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\Discord_bot.csproj",
+        "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/Discord_bot.csproj",
         "projectName": "Discord_bot",
-        "projectPath": "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\Discord_bot.csproj",
-        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\obj\\",
+        "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/Discord_bot.csproj",
+        "packagesPath": "/home/baxic/.nuget/packages/",
+        "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/baxic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\Bot_package.csproj": {
-                "projectPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\Bot_package.csproj"
+              "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj": {
+                "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj"
               }
             }
           }
@@ -478,7 +446,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\maxim\\.dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
         }
       }
     }
