@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLP_package", "Deep_layer\N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_package", "Core_layer\Test_package\Test_package.csproj", "{A243F653-2421-481F-B8BF-2E7D7BFB1016}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_package", "Deep_layer\API_package\API_package.csproj", "{248EEA40-1D98-4334-9183-8D4C114BF7AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{248EEA40-1D98-4334-9183-8D4C114BF7AA} = {031CC5C3-3560-4ECB-ACCE-613FC062E928}
 		{A243F653-2421-481F-B8BF-2E7D7BFB1016} = {8D30CC13-EEED-4B8A-B7A5-F19CD7BDE65F}
 		{2F5A6ECD-2C7A-4D5E-84A7-A042EDBA1DFB} = {53F08A7A-9D6B-4A6B-92C1-CDCE8C220E32}
 		{DDBDC0BA-6796-4C2E-854C-AAC5F6D77610} = {53F08A7A-9D6B-4A6B-92C1-CDCE8C220E32}
@@ -76,5 +79,9 @@ Global
 		{A243F653-2421-481F-B8BF-2E7D7BFB1016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A243F653-2421-481F-B8BF-2E7D7BFB1016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A243F653-2421-481F-B8BF-2E7D7BFB1016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{248EEA40-1D98-4334-9183-8D4C114BF7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248EEA40-1D98-4334-9183-8D4C114BF7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248EEA40-1D98-4334-9183-8D4C114BF7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248EEA40-1D98-4334-9183-8D4C114BF7AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
