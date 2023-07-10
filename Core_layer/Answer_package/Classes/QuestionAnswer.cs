@@ -2,7 +2,7 @@
 
 namespace Answer_package
 {
-    public class QuestionAnswer:IAnswer
+    public class QuestionAnswer : IAnswer
     {
         private string text;
         private static IGpt gpt = new Gpt();
