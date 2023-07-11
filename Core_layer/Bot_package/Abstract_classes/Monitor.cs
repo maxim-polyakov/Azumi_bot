@@ -75,14 +75,28 @@ namespace Bot_package
 
         protected List<string> neurodesc(string content, ICommandAnalyzer command)
         {            
-            string fullPath = Environment.CurrentDirectory + "/Models";
+            string fullPath_First = Environment.CurrentDirectory + "/Models",
+                   fullPath_Second = Environment.CurrentDirectory + "/AppData/Models";
+
             List<string> messagelist = new List<string>();
-            if (System.IO.Directory.Exists(fullPath))
-            {
+            if (System.IO.Directory.Exists(fullPath_First) || System.IO.Directory.Exists(fullPath_Second))
+            {   
+                int CountFiles;
+                string[] models;
                 string[] predicts;
                 List<string[]> modelPahths = new List<string[]>();
-                int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
-                string[] models = Directory.GetFiles(fullPath);
+
+                if(System.IO.Directory.Exists(fullPath_First))
+                {
+                    CountFiles = new DirectoryInfo(fullPath_First).GetFiles().Length;
+                    models = Directory.GetFiles(fullPath_First);
+                }
+                else
+                {
+                    CountFiles = new DirectoryInfo(fullPath_Second).GetFiles().Length;
+                    models = Directory.GetFiles(fullPath_Second);
+                }
+
                 predicts = new string[CountFiles];
                 int i = 0;
                 List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
@@ -93,6 +107,8 @@ namespace Bot_package
                 }
                 messagelist = this.decision(content, command, predicts);            
             }
+
+            
             else
             {
                 messagelist.Add("Нет классификации");

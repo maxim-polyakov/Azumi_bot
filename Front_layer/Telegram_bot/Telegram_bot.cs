@@ -17,11 +17,16 @@ namespace TelegramBot
             if (update.Type == Telegram.Bot.Types.Enums.UpdateType.Message)
             {
                 var message = update.Message;
-                if (message.Text != null)
-                {
+                if (message.Text != null) {
                     IMonitor mmt = new MessageMonitorTelegram(message.Text);
-                    if(mmt.monitor() != string.Empty)
-                        await botClient.SendTextMessageAsync(message.Chat, mmt.monitor());
+                    var output = mmt.monitor();
+                    if(output!= string.Empty) {                        
+                        if(output != string.Empty)
+                            await botClient.SendTextMessageAsync(message.Chat, output);
+                        else {
+                            await botClient.SendTextMessageAsync(message.Chat, "^_^");
+                        }
+                    }
                 }
             }
         }

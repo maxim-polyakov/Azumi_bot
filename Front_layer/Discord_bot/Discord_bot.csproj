@@ -5,6 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <OutputPath>..\..\AppData\</OutputPath>
       <!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
