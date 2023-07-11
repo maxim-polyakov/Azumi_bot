@@ -1,0 +1,12 @@
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/API_package.deps.json
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/API_package.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/API_package.pdb
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/API_package.csproj.AssemblyReference.cache
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/API_package.GeneratedMSBuildEditorConfig.editorconfig
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/API_package.AssemblyInfoInputs.cache
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/API_package.AssemblyInfo.cs
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/API_package.csproj.CoreCompileInputs.cache
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/API_package.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/refint/API_package.dll
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/API_package.pdb
+/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/Debug/net7.0/ref/API_package.dll

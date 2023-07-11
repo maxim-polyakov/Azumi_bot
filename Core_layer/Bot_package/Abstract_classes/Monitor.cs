@@ -13,15 +13,16 @@ namespace Bot_package
     {
         private static IPredictor predictor = new Predictor();
         private static IDB_Communication bridge = new DB_Communication();
-        private static IAnswer ransw = new RandomAnswer();
+        private static IAnswer answ = new RandomAnswer();
         private static ListMaps listMaps = new ListMaps();
         protected string content { get; set; }
+
         private string classify(string chosen_item)
         {
             string outstring = string.Empty;
             Dictionary<string, string> info_dict = new Dictionary<string, string>()
             {
-                {"Приветствие", ransw.answer() + ". "},
+                {"Приветствие", answ.answer() + ". "},
                 {"Благодарность","Не за что."},
                 {"Дело","Утверждение про дела. "},
                 {"Погода","Утверждение про погоду. "},
@@ -29,7 +30,23 @@ namespace Bot_package
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
-        }      
+        }
+
+        private string classify_question(string chosen_item)
+        {
+            string outstring = string.Empty;
+
+            Dictionary<string, string> info_dict = new Dictionary<string, string>()
+            {
+                {"Приветствие", answ.answer() + ". "},
+                {"Благодарность","Не за что."},
+                {"Дело", "Я в порядке. "},
+                {"Погода", "Погода норм. "},
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
+            };
+            info_dict.TryGetValue(chosen_item, out outstring);
+            return outstring;
+        }
 
         private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts)
         {
@@ -40,11 +57,10 @@ namespace Bot_package
             }
             else if (text_message.Contains('?'))
             {
-                IAnswer qansw = new QuestionAnswer(text_message);
-
+                QuestionAnswer quansw = new QuestionAnswer(text_message);
                 foreach (string predict in predicts)
                 {
-                    outlist.Add(qansw.answer());
+                    outlist.Add(quansw.answer());
                 }
             }
             else
@@ -59,14 +75,28 @@ namespace Bot_package
 
         protected List<string> neurodesc(string content, ICommandAnalyzer command)
         {            
-            string fullPath = Environment.CurrentDirectory + "/Models";
+            string fullPath_First = Environment.CurrentDirectory + "/Models",
+                   fullPath_Second = Environment.CurrentDirectory + "/AppData/Models";
+
             List<string> messagelist = new List<string>();
-            if (System.IO.Directory.Exists(fullPath))
-            {
+            if (System.IO.Directory.Exists(fullPath_First) || System.IO.Directory.Exists(fullPath_Second))
+            {   
+                int CountFiles;
+                string[] models;
                 string[] predicts;
                 List<string[]> modelPahths = new List<string[]>();
-                int CountFiles = new DirectoryInfo(fullPath).GetFiles().Length;
-                string[] models = Directory.GetFiles(fullPath);
+
+                if(System.IO.Directory.Exists(fullPath_First))
+                {
+                    CountFiles = new DirectoryInfo(fullPath_First).GetFiles().Length;
+                    models = Directory.GetFiles(fullPath_First);
+                }
+                else
+                {
+                    CountFiles = new DirectoryInfo(fullPath_Second).GetFiles().Length;
+                    models = Directory.GetFiles(fullPath_Second);
+                }
+
                 predicts = new string[CountFiles];
                 int i = 0;
                 List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
@@ -77,6 +107,8 @@ namespace Bot_package
                 }
                 messagelist = this.decision(content, command, predicts);            
             }
+
+            
             else
             {
                 messagelist.Add("Нет классификации");

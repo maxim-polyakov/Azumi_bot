@@ -8,11 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Deep_layer\DB_package\DB_package.csproj" />
+    <PackageReference Include="OpenAI" Version="1.7.2" />
     <ProjectReference Include="..\..\Deep_layer\NLP_package\NLP_package.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="LostTech.TensorFlow.GPT" Version="0.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 </Project>
