@@ -10,7 +10,7 @@ namespace TelegramBot
     {
         private static IToken token_maker = new Bot_package.Token();
 
-        private static ITelegramBotClient bot = new TelegramBotClient(token_maker.get_token("select token from assistant_sets.tokens where botname = \'Azumi\' and platformname = \'Telegram\'"));
+        private ITelegramBotClient bot;
 
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
@@ -30,13 +30,21 @@ namespace TelegramBot
                 }
             }
         }
+        
         public static async Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
         }
 
-        static async Task Main(string[] args)
-        {
+        public async Task MainAsync() {
+            bot = new TelegramBotClient(token_maker.get_token("select token from assistant_sets.tokens where botname = \'Azumi\' and platformname = \'Telegram\'"));
+        }
+
+        public static async Task Main(string[] args)
+        {      
+            TelegramBot tb = new TelegramBot();
+            tb.MainAsync();
+
             await Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {
@@ -46,7 +54,7 @@ namespace TelegramBot
                 {
                     AllowedUpdates = { },
                 };
-                bot.StartReceiving(
+                tb.bot.StartReceiving(
                     HandleUpdateAsync,
                     HandleErrorAsync,
                     receiverOptions,
