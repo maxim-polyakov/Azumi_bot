@@ -3,15 +3,13 @@ using Discord.WebSocket;
 using Microsoft.Extensions.Hosting;
 using Bot_package;
 
-namespace Discord_bot
-{
+namespace Discord_bot {
     
-    class Discord_bot
-    {
+    class Discord_bot: IDiscord_bot {
         
-        private DiscordSocketClient client = new DiscordSocketClient();
+        private DiscordSocketClient client;
 
-        static async Task Main(string[] args)
+        public static async Task Main(string[] args)
         {   
             await Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
@@ -21,7 +19,7 @@ namespace Discord_bot
             .RunConsoleAsync();
         }
 
-        async Task MainAsync()
+        public async Task MainAsync()
         {
             client = new DiscordSocketClient();
             client.MessageReceived += CommandHandler;
@@ -32,7 +30,7 @@ namespace Discord_bot
             await client.StartAsync();
         }
 
-        private Task CommandHandler(SocketMessage msg)
+        public Task CommandHandler(SocketMessage msg)
         {
             if (msg.Content != null)
             {
