@@ -4,8 +4,7 @@ using System;
 
 namespace Answer_package
 {
-    public class RandomAnswer : IAnswer
-    {
+    public class RandomAnswer : IAnswer {
         static DB_Communication DB_Communication = new DB_Communication();
         public string answer()
         {

@@ -1,7 +1,6 @@
 ﻿namespace DB_package
 {
-    internal class Connections
-    {
+    internal class Connections {
         public string cs_remote { get; }
 
         public Connections()

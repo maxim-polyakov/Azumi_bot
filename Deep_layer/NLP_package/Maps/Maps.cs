@@ -2,8 +2,7 @@ using System.Collections.Generic;
 
 namespace NLP_package
 {
-    public class Maps
-    {
+    public class Maps {
         public readonly Dictionary<bool, string> himap = new Dictionary<bool, string>()
         {
             { true, "Приветствие"},
@@ -31,10 +30,8 @@ namespace NLP_package
         };
     }
 
-    public class ListMaps : Maps
-    {
-        public List<Dictionary<bool, string>> GetListMaps()
-        {
+    public class ListMaps : Maps {
+        public List<Dictionary<bool, string>> GetListMaps() {
             List<Dictionary<bool, string>> lmaps = new List<Dictionary<bool, string>>();
             lmaps.Add(this.himap);
             lmaps.Add(this.thmap);

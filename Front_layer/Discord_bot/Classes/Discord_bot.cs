@@ -7,7 +7,7 @@ namespace Discord_bot {
     
     class Discord_bot: IDiscord_bot {
         
-        private DiscordSocketClient client;
+        private DiscordSocketClient client = new DiscordSocketClient();
 
         public static async Task Main(string[] args)
         {   

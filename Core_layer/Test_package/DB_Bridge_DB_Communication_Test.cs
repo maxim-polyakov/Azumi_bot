@@ -4,8 +4,7 @@ using System.Collections.Generic;
 
 
 [TestClass]
-public class DBCommunicztion_Test
-{
+public class DBCommunicztion_Test {
     static IDB_Communication bridge = new DB_Communication();
 
     [TestMethod]

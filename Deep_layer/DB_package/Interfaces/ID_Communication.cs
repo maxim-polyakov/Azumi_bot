@@ -1,10 +1,8 @@
 ﻿using Microsoft.Data.Analysis;
 using System.Collections.Generic;
 
-namespace DB_package
-{
-    public interface IDB_Communication
-    {
+namespace DB_package {
+    public interface IDB_Communication {
         void insert_to(string insert, string tablename);
 
         DataFrame get_data();

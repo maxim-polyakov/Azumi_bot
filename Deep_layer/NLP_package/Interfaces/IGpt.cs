@@ -2,8 +2,7 @@
 
 namespace NLP_package
 {
-    public interface IGpt
-    {
+    public interface IGpt {
         public string generate(string text);
     }
 }

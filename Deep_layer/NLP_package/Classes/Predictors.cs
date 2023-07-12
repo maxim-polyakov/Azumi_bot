@@ -4,8 +4,7 @@ using System;
 
 namespace NLP_package
 {
-    public class Predictor : IPredictor
-    {
+    public class Predictor : IPredictor {
         public string predict(string chat_text_message, string model_name, Dictionary<bool, string> map)
         {
             MLContext mlContext = new MLContext();

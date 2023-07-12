@@ -3,8 +3,7 @@ using DB_package;
 
 namespace Bot_package
 {
-    public class AToken : IToken
-    {
+    public class AToken : IToken {
         private static IDB_Communication bridge = new DB_Communication();
         public void add_token(string token)
         {

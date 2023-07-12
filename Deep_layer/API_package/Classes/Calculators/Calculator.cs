@@ -1,7 +1,6 @@
 namespace API_package
 {
-    public class Calculator : ICalculator
-    {
+    public class Calculator : ICalculator {
         public string derevative()
         {
             throw new NotImplementedException();

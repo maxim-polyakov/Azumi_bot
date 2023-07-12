@@ -4,10 +4,8 @@ using Npgsql;
 using Microsoft.Data.Analysis;
 
 
-namespace DB_package
-{
-    public class DB_Communication : IDB_Communication
-    {
+namespace DB_package {
+    public class DB_Communication : IDB_Communication {
         public void insert_to(string insert, string tablename)
         {
             var cs = new Connections().cs_remote;
@@ -29,8 +27,7 @@ namespace DB_package
             }
         }
 
-        public string get_token(string select)
-        {
+        public string get_token(string select) {
             var cs = new Connections().cs_remote;
             var dataSource = NpgsqlDataSource.Create(cs);
             string token = string.Empty;
@@ -46,8 +43,7 @@ namespace DB_package
             return token;
         }
 
-        public DataFrame get_data()
-        {
+        public DataFrame get_data() {
             string select = "select * FROM train_sets.all_set_thanks" +
                             " union all " +
                             "select * FROM train_sets.all_set_none" +
@@ -110,8 +106,7 @@ namespace DB_package
             return df;
         }
 
-        public Dictionary<int, string> get_data(string select)
-        {
+        public Dictionary<int, string> get_data(string select) {
             var cs = new Connections().cs_remote;
             var dataSource = NpgsqlDataSource.Create(cs);
             var command = dataSource.CreateCommand(select);
@@ -128,8 +123,7 @@ namespace DB_package
             return data;
         }
 
-        public bool checkcommands(string input_string)
-        {
+        public bool checkcommands(string input_string) {
             var cs = new Connections().cs_remote;
             var conn = new NpgsqlConnection(cs);
             conn.Open();
@@ -167,6 +161,5 @@ namespace DB_package
             }
             return false;
         }
-
     }
 }

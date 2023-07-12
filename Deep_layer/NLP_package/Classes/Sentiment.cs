@@ -2,8 +2,7 @@
 
 namespace NLP_package
 {
-    public class SentimentData
-    {
+    public class SentimentData {
         [LoadColumn(0)]
         public string SentimentText;
 
@@ -11,8 +10,7 @@ namespace NLP_package
         public bool Sentiment;
     }
 
-    public class SentimentPrediction : SentimentData
-    {
+    public class SentimentPrediction : SentimentData {
 
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }

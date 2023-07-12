@@ -3,8 +3,7 @@
 namespace Test_package;
 
 [TestClass]
-public class Answer_package_QuestinAnswer
-{
+public class Answer_package_QuestinAnswer {
     [TestMethod]
     public void TestMethod_answer()
     {

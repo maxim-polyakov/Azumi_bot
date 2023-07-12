@@ -6,14 +6,12 @@ using Microsoft.Extensions.Hosting;
 
 namespace TelegramBot
 {
-    class TelegramBot
-    {
+    class TelegramBot {
         private static IToken token_maker = new Bot_package.Token();
-
+        
         private ITelegramBotClient bot;
 
-        public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
-        {
+        public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken) {
             if (update.Type == Telegram.Bot.Types.Enums.UpdateType.Message)
             {
                 var message = update.Message;
@@ -31,8 +29,7 @@ namespace TelegramBot
             }
         }
         
-        public static async Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
-        {
+        public static async Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken) {
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
         }
 
@@ -40,8 +37,7 @@ namespace TelegramBot
             bot = new TelegramBotClient(token_maker.get_token("select token from assistant_sets.tokens where botname = \'Azumi\' and platformname = \'Telegram\'"));
         }
 
-        public static async Task Main(string[] args)
-        {      
+        public static async Task Main(string[] args) {      
             TelegramBot tb = new TelegramBot();
             tb.MainAsync();
 

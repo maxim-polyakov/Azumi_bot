@@ -3,8 +3,7 @@ using System.Net;
 namespace API_package
 {
 
-    public class GoogleTranslator : ITranslator
-    {
+    public class GoogleTranslator : ITranslator {
         public string translate(string input, string languagePair)
         {
             string url = String.Format("http://www.google.com/translate_t?hl=en&ie=UTF8&text={0}&langpair={1}", input, languagePair);

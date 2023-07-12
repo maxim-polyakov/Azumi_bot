@@ -9,16 +9,14 @@ using System.Collections;
 
 namespace Bot_package
 {
-    public abstract class Monitor : IMonitor
-    {
+    public abstract class Monitor : IMonitor {
         private static IPredictor predictor = new Predictor();
         private static IDB_Communication bridge = new DB_Communication();
         private static IAnswer answ = new RandomAnswer();
         private static ListMaps listMaps = new ListMaps();
         protected string content { get; set; }
 
-        private string classify(string chosen_item)
-        {
+        private string classify(string chosen_item) {
             string outstring = string.Empty;
             Dictionary<string, string> info_dict = new Dictionary<string, string>()
             {
@@ -32,8 +30,7 @@ namespace Bot_package
             return outstring;
         }
 
-        private string classify_question(string chosen_item)
-        {
+        private string classify_question(string chosen_item) {
             string outstring = string.Empty;
 
             Dictionary<string, string> info_dict = new Dictionary<string, string>()
@@ -48,8 +45,7 @@ namespace Bot_package
             return outstring;
         }
 
-        private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts)
-        {
+        private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts) {
             List<string> outlist = new List<string>();
             if (bridge.checkcommands(text_message))
             {
@@ -73,8 +69,7 @@ namespace Bot_package
             return outlist;
         }
 
-        protected List<string> neurodesc(string content, ICommandAnalyzer command)
-        {            
+        protected List<string> neurodesc(string content, ICommandAnalyzer command) {            
             string fullPath_First = Environment.CurrentDirectory + "/Models",
                    fullPath_Second = Environment.CurrentDirectory + "/AppData/Models";
 
@@ -106,9 +101,7 @@ namespace Bot_package
                     i++;
                 }
                 messagelist = this.decision(content, command, predicts);            
-            }
-
-            
+            }            
             else
             {
                 messagelist.Add("Нет классификации");
@@ -116,8 +109,7 @@ namespace Bot_package
             return messagelist;
         }
 
-        public string monitor()
-        {
+        public string monitor() {
             ICommandAnalyzer command = new CommandAnalyzer(this.content);
             bridge.insert_to(content, "messtorage.storage");
             string outputmessage = string.Empty;

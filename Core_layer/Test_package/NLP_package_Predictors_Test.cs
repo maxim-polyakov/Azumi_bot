@@ -7,8 +7,7 @@ public class Predictor_Test
     static IPredictor predictor = new Predictor();
 
     [TestMethod]
-    public void TestMethod_Predict()
-    {
+    public void TestMethod_Predict() {
         Maps map = new Maps();
 
         string text = "ïðèâåò";

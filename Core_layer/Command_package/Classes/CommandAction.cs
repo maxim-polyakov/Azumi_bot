@@ -1,7 +1,6 @@
 namespace Command_package
 {
-    public class CommandAction : ICommandAction
-    {
+    public class CommandAction : ICommandAction {
         public void fas()
         {
             throw new System.NotImplementedException();

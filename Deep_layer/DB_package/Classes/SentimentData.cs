@@ -1,9 +1,7 @@
 ﻿using Microsoft.Data.Analysis;
 
-namespace DB_package
-{
-    public class SentimentData
-    {
+namespace DB_package {
+    public class SentimentData {
         public PrimitiveDataFrameColumn<int> id { get; set; }
 
         public StringDataFrameColumn text { get; set; }
