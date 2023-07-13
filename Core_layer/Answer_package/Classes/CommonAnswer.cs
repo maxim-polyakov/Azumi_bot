@@ -1,7 +1,6 @@
 ﻿namespace Answer_package
 {
-    public class CommonAnswer
-    {
+    public class CommonAnswer {
         
     }
 }
