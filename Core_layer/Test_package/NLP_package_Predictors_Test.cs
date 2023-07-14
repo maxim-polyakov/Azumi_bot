@@ -2,8 +2,7 @@ namespace Test_package;
 using NLP_package;
 
 [TestClass]
-public class Predictor_Test
-{
+public class Predictor_Test {
     static IPredictor predictor = new Predictor();
 
     [TestMethod]

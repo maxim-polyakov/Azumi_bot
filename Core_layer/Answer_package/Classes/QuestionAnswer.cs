@@ -1,7 +1,6 @@
 ﻿using NLP_package;
 
-namespace Answer_package
-{
+namespace Answer_package {
     public class QuestionAnswer : IAnswer {
         private string text;
         private static IGpt gpt = new Gpt();
