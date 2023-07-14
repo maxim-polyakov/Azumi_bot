@@ -3,6 +3,7 @@
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/publish/Models/2_businessmodel.zip
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/publish/Models/3_weathermodel.zip
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/publish/Models/4_trashmodel.zip
+/home/baxic/Documents/GitHub/Azumi_bot/AppData/publish/Models/5_moodmodel.zip
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/publish/Discord_bot
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/publish/Discord_bot.dll
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/publish/Discord_bot.deps.json

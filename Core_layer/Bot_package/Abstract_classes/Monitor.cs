@@ -5,7 +5,6 @@ using DB_package;
 using System.Collections.Generic;
 using System.IO;
 using System;
-using System.Collections;
 
 namespace Bot_package {
     public abstract class Monitor : IMonitor {
@@ -22,7 +21,8 @@ namespace Bot_package {
                 {"Благодарность","Не за что."},
                 {"Дело","Утверждение про дела. "},
                 {"Погода","Утверждение про погоду. "},
-                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "},
+                {"Настроение", "Почему? "}
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
@@ -30,13 +30,13 @@ namespace Bot_package {
 
         private string classify_question(string chosen_item) {
             string outstring = string.Empty;
-
             Dictionary<string, string> info_dict = new Dictionary<string, string>() {
                 {"Приветствие", answ.answer() + ". "},
                 {"Благодарность","Не за что."},
                 {"Дело", "Я в порядке. "},
                 {"Погода", "Погода норм. "},
-                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "},
+                {"Настроение", "Настроение в порядке. "}
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
@@ -50,7 +50,7 @@ namespace Bot_package {
             else if (text_message.Contains('?')) {
                 QuestionAnswer quansw = new QuestionAnswer(text_message);
                 foreach (string predict in predicts) {
-                    outlist.Add(quansw.answer());
+                    outlist.Add(classify_question(predict));
                 }
             } else {
                 foreach (string predict in predicts) {
@@ -74,9 +74,11 @@ namespace Bot_package {
                 if(System.IO.Directory.Exists(fullPath_First)) {
                     CountFiles = new DirectoryInfo(fullPath_First).GetFiles().Length;
                     models = Directory.GetFiles(fullPath_First);
+                    Array.Sort(models);
                 } else {
                     CountFiles = new DirectoryInfo(fullPath_Second).GetFiles().Length;
                     models = Directory.GetFiles(fullPath_Second);
+                    Array.Sort(models);
                 }
                 predicts = new string[CountFiles];
                 int i = 0;
@@ -96,7 +98,6 @@ namespace Bot_package {
             ICommandAnalyzer command = new CommandAnalyzer(this.content);
             bridge.insert_to(content, "messtorage.storage");
             string outputmessage = string.Empty;
-
             if ((this.content.ToLower()).Contains("азуми")) {
                 content = content.Replace("азуми", "");
                 

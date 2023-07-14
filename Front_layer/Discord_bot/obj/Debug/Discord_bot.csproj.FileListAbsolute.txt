@@ -45,3 +45,4 @@ D:/GitHub/Azumi_bot/Front_layer/Discord_bot/obj/Debug/ref/Discord_bot.dll
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/Models/2_businessmodel.zip
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/Models/3_weathermodel.zip
 /home/baxic/Documents/GitHub/Azumi_bot/AppData/Models/4_trashmodel.zip
+/home/baxic/Documents/GitHub/Azumi_bot/AppData/Models/5_moodmodel.zip

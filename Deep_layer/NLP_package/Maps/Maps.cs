@@ -28,6 +28,11 @@ namespace NLP_package
             { true, "Погода"},
             { false, "Не погода"}
         };
+        public readonly Dictionary<bool, string> moodmap = new Dictionary<bool, string>()
+        {
+            { true, "Настроение"},
+            { false, "Не настроение"}
+        };
     }
 
     public class ListMaps : Maps {
@@ -38,6 +43,7 @@ namespace NLP_package
             lmaps.Add(this.businessmap);
             lmaps.Add(this.weathermap);
             lmaps.Add(this.trashmap);
+            lmaps.Add(this.moodmap);
             return lmaps;
         }
     }
