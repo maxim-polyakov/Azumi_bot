@@ -1,4 +1,4 @@
-![plot](https://github.com/maxim-polyakov/Azumi_bot/blob/main/Azumi_architecture.png)
+![plot](https://github.com/maxim-polyakov/Azumi_bot/blob/main/House.jpg)
 
 # Azumi_bot
 
