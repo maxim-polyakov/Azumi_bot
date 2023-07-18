@@ -1,7 +1,6 @@
 ﻿namespace Bot_package
 {
-    public interface IMonitor
-    {
+    public interface IMonitor {
         string monitor();
     }
 }

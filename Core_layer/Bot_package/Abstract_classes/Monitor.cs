@@ -5,10 +5,8 @@ using DB_package;
 using System.Collections.Generic;
 using System.IO;
 using System;
-using System.Collections;
 
-namespace Bot_package
-{
+namespace Bot_package {
     public abstract class Monitor : IMonitor {
         private static IPredictor predictor = new Predictor();
         private static IDB_Communication bridge = new DB_Communication();
@@ -18,13 +16,14 @@ namespace Bot_package
 
         private string classify(string chosen_item) {
             string outstring = string.Empty;
-            Dictionary<string, string> info_dict = new Dictionary<string, string>()
-            {
+            Dictionary<string, string> info_dict = new Dictionary<string, string>() {
                 {"Приветствие", answ.answer() + ". "},
                 {"Благодарность","Не за что."},
                 {"Дело","Утверждение про дела. "},
                 {"Погода","Утверждение про погоду. "},
-                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "},
+                {"Настроение", "Почему? "},
+                {"Здоровье","Почему? "}
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
@@ -32,14 +31,14 @@ namespace Bot_package
 
         private string classify_question(string chosen_item) {
             string outstring = string.Empty;
-
-            Dictionary<string, string> info_dict = new Dictionary<string, string>()
-            {
+            Dictionary<string, string> info_dict = new Dictionary<string, string>() {
                 {"Приветствие", answ.answer() + ". "},
                 {"Благодарность","Не за что."},
                 {"Дело", "Я в порядке. "},
                 {"Погода", "Погода норм. "},
-                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "},
+                {"Настроение", "Настроение в порядке. "},
+                {"Здоровье","Здоровье в порядке. "}
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
@@ -47,22 +46,16 @@ namespace Bot_package
 
         private List<string> decision(string text_message, ICommandAnalyzer command, string[] predicts) {
             List<string> outlist = new List<string>();
-            if (bridge.checkcommands(text_message))
-            {
+            if (bridge.checkcommands(text_message)) {
                 outlist.Add(command.commandanalyse(text_message));
             }
-            else if (text_message.Contains('?'))
-            {
+            else if (text_message.Contains('?')) {
                 QuestionAnswer quansw = new QuestionAnswer(text_message);
-                foreach (string predict in predicts)
-                {
-                    outlist.Add(quansw.answer());
+                foreach (string predict in predicts) {
+                    outlist.Add(classify_question(predict));
                 }
-            }
-            else
-            {
-                foreach (string predict in predicts)
-                {
+            } else {
+                foreach (string predict in predicts) {
                     outlist.Add(classify(predict));
                 }
             }
@@ -74,36 +67,30 @@ namespace Bot_package
                    fullPath_Second = Environment.CurrentDirectory + "/AppData/Models";
 
             List<string> messagelist = new List<string>();
-            if (System.IO.Directory.Exists(fullPath_First) || System.IO.Directory.Exists(fullPath_Second))
-            {   
+            if (System.IO.Directory.Exists(fullPath_First) || System.IO.Directory.Exists(fullPath_Second)) {   
                 int CountFiles;
                 string[] models;
                 string[] predicts;
                 List<string[]> modelPahths = new List<string[]>();
 
-                if(System.IO.Directory.Exists(fullPath_First))
-                {
+                if(System.IO.Directory.Exists(fullPath_First)) {
                     CountFiles = new DirectoryInfo(fullPath_First).GetFiles().Length;
                     models = Directory.GetFiles(fullPath_First);
-                }
-                else
-                {
+                    Array.Sort(models);
+                } else {
                     CountFiles = new DirectoryInfo(fullPath_Second).GetFiles().Length;
                     models = Directory.GetFiles(fullPath_Second);
+                    Array.Sort(models);
                 }
-
                 predicts = new string[CountFiles];
                 int i = 0;
                 List<Dictionary<bool, string>> maplist = listMaps.GetListMaps();
-                foreach (string model in models)
-                {
+                foreach (string model in models) {
                     predicts[i] = predictor.predict(content, model, maplist[i]);
                     i++;
                 }
                 messagelist = this.decision(content, command, predicts);            
-            }            
-            else
-            {
+            } else {
                 messagelist.Add("Нет классификации");
             }
             return messagelist;
@@ -113,15 +100,12 @@ namespace Bot_package
             ICommandAnalyzer command = new CommandAnalyzer(this.content);
             bridge.insert_to(content, "messtorage.storage");
             string outputmessage = string.Empty;
-
-            if ((this.content.ToLower()).Contains("азуми"))
-            {
+            if ((this.content.ToLower()).Contains("азуми")) {
                 content = content.Replace("азуми", "");
                 
                 List<string> messagelist = this.neurodesc(content, command);
 
-                foreach (string mesage in messagelist)
-                {
+                foreach (string mesage in messagelist) {
                     outputmessage += mesage;
                 }
             }

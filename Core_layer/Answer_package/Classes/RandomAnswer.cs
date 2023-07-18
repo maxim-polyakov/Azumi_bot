@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace Answer_package
-{
+namespace Answer_package {
     public class RandomAnswer : IAnswer {
         static DB_Communication DB_Communication = new DB_Communication();
         public string answer()
