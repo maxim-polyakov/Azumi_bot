@@ -3,7 +3,7 @@
 namespace Answer_package {
     public class QuestionAnswer : IAnswer {
         private string text;
-        private static IGpt gpt = new Gpt();
+        private IGpt gpt = new Gpt();
 
         public QuestionAnswer(string text)
         {

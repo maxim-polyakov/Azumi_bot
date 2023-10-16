@@ -4742,24 +4742,26 @@
     ]
   },
   "packageFolders": {
-    "/home/baxic/.nuget/packages/": {}
+    "C:\\Users\\maxim\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/API_package.csproj",
+      "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Deep_layer\\API_package\\API_package.csproj",
       "projectName": "API_package",
-      "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/API_package.csproj",
-      "packagesPath": "/home/baxic/.nuget/packages/",
-      "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/obj/",
+      "projectPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\API_package\\API_package.csproj",
+      "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\Azumi_bot\\Deep_layer\\API_package\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/baxic/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4807,7 +4809,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.109/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },

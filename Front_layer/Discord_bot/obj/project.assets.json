@@ -3513,32 +3513,34 @@
     ]
   },
   "packageFolders": {
-    "/home/baxic/.nuget/packages/": {}
+    "C:\\Users\\maxim\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/Discord_bot.csproj",
+      "projectUniqueName": "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\Discord_bot.csproj",
       "projectName": "Discord_bot",
-      "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/Discord_bot.csproj",
-      "packagesPath": "/home/baxic/.nuget/packages/",
-      "outputPath": "/home/baxic/Documents/GitHub/Azumi_bot/Front_layer/Discord_bot/obj/",
+      "projectPath": "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\Discord_bot.csproj",
+      "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\Azumi_bot\\Front_layer\\Discord_bot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/baxic/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj": {
-              "projectPath": "/home/baxic/Documents/GitHub/Azumi_bot/Core_layer/Bot_package/Bot_package.csproj"
+            "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\Bot_package.csproj": {
+              "projectPath": "D:\\GitHub\\Azumi_bot\\Core_layer\\Bot_package\\Bot_package.csproj"
             }
           }
         }
@@ -3586,7 +3588,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.109/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
