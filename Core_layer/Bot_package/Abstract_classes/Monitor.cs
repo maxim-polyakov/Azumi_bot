@@ -1,4 +1,4 @@
-﻿using NLP_package;
+using NLP_package;
 using Answer_package;
 using Command_package;
 using DB_package;
@@ -21,9 +21,7 @@ namespace Bot_package {
                 {"Благодарность","Не за что."},
                 {"Дело","Утверждение про дела. "},
                 {"Погода","Утверждение про погоду. "},
-                {"Треш", "Просьба, оставить неприличные высказывания при себе. "},
-                {"Настроение", "Почему? "},
-                {"Здоровье","Почему? "}
+                {"Треш", "Просьба, оставить неприличные высказывания при себе. "}
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
@@ -113,3 +111,4 @@ namespace Bot_package {
         }
     }
 }
+
