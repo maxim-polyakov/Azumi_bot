@@ -1,4 +1,4 @@
-﻿using NLP_package;
+using NLP_package;
 using Answer_package;
 using Command_package;
 using DB_package;
@@ -111,3 +111,4 @@ namespace Bot_package {
         }
     }
 }
+
