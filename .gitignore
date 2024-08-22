@@ -12,6 +12,3 @@ AppData/*
 *.info
 *.targets
 *.exe
-/Core_layer/Test_package/obj
-/Core_layer/Test_package/obj
-/Core_layer/Test_package/obj
