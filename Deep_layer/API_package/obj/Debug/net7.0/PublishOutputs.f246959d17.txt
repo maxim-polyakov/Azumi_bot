@@ -1,8 +1,0 @@
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/API_package.dll
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/API_package.deps.json
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/API_package.pdb
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/Tranform.Try.dll
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/System.Net.Http.Formatting.dll
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/Newtonsoft.Json.dll
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/Newtonsoft.Json.Bson.dll
-/home/baxic/Documents/GitHub/Azumi_bot/Deep_layer/API_package/bin/Debug/net7.0/publish/Wiki.Net.dll
