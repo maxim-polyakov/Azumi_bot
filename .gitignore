@@ -3,3 +3,15 @@ obj/*
 .idea/*
 .vscode/*
 AppData/*
+.vs/*
+*.cache
+*.json
+*.dll
+*.props
+*.pdb
+*.info
+*.targets
+*.exe
+/Core_layer/Test_package/obj
+/Core_layer/Test_package/obj
+/Core_layer/Test_package/obj
