@@ -24,7 +24,19 @@ namespace Discord_bot {
         {
             string outstring = string.Empty;
             Dictionary<string, string> info_dict = new Dictionary<string, string>() {
-                {"/clean", "True"}
+                {"/clean", "True"},
+                {"/calculate", "True" },
+                {"/join", "True" },
+                {"/leave", "True" },
+                {"/find", "True" },
+                {"/start_recording", "True" },
+                {"/stop_recording", "True" },
+                {"/play_song", "True" },
+                {"/pause", "True"},
+                {"/stop", "True" },
+                {"/queue", "True" },
+                {"/resume", "True" },
+                {"/weather", "True" }
             };
             info_dict.TryGetValue(chosen_item, out outstring);
             return outstring;
