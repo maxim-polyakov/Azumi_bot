@@ -63,7 +63,7 @@ namespace Discord_bot {
             client = _client;
         }
 
-        public async Task<Task> HandleCommandAsync(SocketMessage msg) {
+        public Task HandleCommandAsync(SocketMessage msg) {
             var message = msg as SocketUserMessage;
             int ArgPos = 0;
             if ((message != null) && (!(message.HasCharPrefix('/', ref ArgPos) || message.HasMentionPrefix(client.CurrentUser, ref ArgPos))))
