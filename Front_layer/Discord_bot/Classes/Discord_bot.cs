@@ -16,18 +16,29 @@ namespace Discord_bot {
         
         private DiscordSocketClient client = new DiscordSocketClient();
 
-        private CommandService commands;
-
         private IServiceProvider services;
 
         private ulong testGuildId;
+
+        private string commands(string chosen_item)
+        {
+            string outstring = string.Empty;
+            Dictionary<string, string> info_dict = new Dictionary<string, string>() {
+                {"/clean", "True"}
+            };
+            info_dict.TryGetValue(chosen_item, out outstring);
+            return outstring;
+        }
 
         public static async Task Main(string[] args)
         {   
             await Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
-            {    
-                new Discord_bot().MainAsync().GetAwaiter().GetResult();
+            {
+                DiscordSocketClient _client = new DiscordSocketClient();
+                CommandService _commands = new CommandService();
+
+                new Discord_bot(_client,_commands).MainAsync().GetAwaiter().GetResult();
             })
             .RunConsoleAsync();
         }
@@ -38,7 +49,7 @@ namespace Discord_bot {
 
             client.Ready += ReadyAsync;
 
-            client.MessageReceived += CommandHandler;
+            client.MessageReceived += HandleCommandAsync;
 
             IToken token_maker = new Bot_package.Token();
             var token = token_maker.get_token("select token from assistant_sets.tokens where botname = \'Azumi\' and platformname = \'Discord\'");
@@ -47,17 +58,30 @@ namespace Discord_bot {
             await client.StartAsync();
         }
 
-        public Task CommandHandler(SocketMessage msg)
+        public Discord_bot(DiscordSocketClient _client, CommandService _commands)
         {
-            if (msg.Content != null)
+            client = _client;
+        }
+
+        public async Task<Task> HandleCommandAsync(SocketMessage msg) {
+            var message = msg as SocketUserMessage;
+            int ArgPos = 0;
+            if ((message != null) && (!(message.HasCharPrefix('/', ref ArgPos) || message.HasMentionPrefix(client.CurrentUser, ref ArgPos))))
             {
-                IMonitor mmd = new MessageMonitorDiscord(msg.Content);
-                if (!msg.Author.IsBot)
-                {   
+                if (!message.Author.IsBot)
+                {
+                    IMonitor mmd = new MessageMonitorDiscord(msg.Content);
                     var output = mmd.monitor();
-                    if(output != string.Empty)
-                        msg.Channel.SendMessageAsync(output);
+                    if (output != string.Empty)
+                        message.Channel.SendMessageAsync(output);
                 }
+            }
+            else {
+                if (message.HasCharPrefix('/', ref ArgPos)) {
+                    var output = commands(message.Content);
+                    message.Channel.SendMessageAsync(output);
+                }
+
             }
             return Task.CompletedTask;
         }
