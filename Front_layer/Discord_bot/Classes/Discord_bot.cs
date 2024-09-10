@@ -9,6 +9,8 @@ using System.Reflection;
 using System.Windows.Input;
 using System.Diagnostics;
 using System.Xml.Linq;
+using System.Text;
+using System;
 
 namespace Discord_bot {
     
@@ -90,7 +92,10 @@ namespace Discord_bot {
             }
             else {
                 if (message.HasCharPrefix('/', ref ArgPos)) {
-                    var output = commands(message.Content);
+
+                    var str = message.Content;
+                    string[] words = str.Split(' ');
+                    var output = commands(words[0]);
                     message.Channel.SendMessageAsync(output);
                 }
 
@@ -101,7 +106,10 @@ namespace Discord_bot {
 
         private async Task ReadyAsync()
         {
-            client.SetActivityAsync(new Game("за сервером", ActivityType.Watching));
+            var str = "за сервером";
+            byte[] bytes = Encoding.Default.GetBytes(str);
+            str = Encoding.UTF8.GetString(bytes);
+            client.SetActivityAsync(new Game(str, ActivityType.Watching));
         }
     }
 }
