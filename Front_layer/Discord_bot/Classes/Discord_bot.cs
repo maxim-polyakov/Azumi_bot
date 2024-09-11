@@ -19,7 +19,7 @@ namespace Discord_bot {
         private DiscordSocketClient client = new DiscordSocketClient();
 
         private IServiceProvider services;
-
+        private CommandService commands;
         private ulong testGuildId;
 
 
@@ -105,7 +105,7 @@ namespace Discord_bot {
             client = _client;
         }
 
-        public Task HandleCommandAsync(SocketMessage msg) {
+        public async Task HandleCommandAsync(SocketMessage msg) {
             var message = msg as SocketUserMessage;
             int ArgPos = 0;
             if ((message != null) && (!(message.HasCharPrefix('/', ref ArgPos) || message.HasMentionPrefix(client.CurrentUser, ref ArgPos))))
@@ -115,7 +115,7 @@ namespace Discord_bot {
                     IMonitor mmd = new MessageMonitorDiscord(msg.Content);
                     var output = mmd.monitor();
                     if (output != string.Empty)
-                        message.Channel.SendMessageAsync(output);
+                        await message.Channel.SendMessageAsync(output);
                 }
             }
             else {
@@ -132,13 +132,12 @@ namespace Discord_bot {
                     }
                     else if (words.Length == 3)
                     {
-
+                        output = CommandsTrible(words[0], words[1], words[2]);
                     }
-                    message.Channel.SendMessageAsync(output);
+                    await message.Channel.SendMessageAsync(output);
                 }
 
             }
-            return Task.CompletedTask;
         }
 
 
