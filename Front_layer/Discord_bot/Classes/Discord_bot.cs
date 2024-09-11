@@ -144,7 +144,7 @@ namespace Discord_bot {
 
         private async Task ReadyAsync()
         {
-            var str = "за сервером";
+            var str = "Р·Р° СЃРµСЂРІРµСЂРѕРј";
             byte[] bytes = Encoding.Default.GetBytes(str);
             str = Encoding.UTF8.GetString(bytes);
             client.SetActivityAsync(new Game(str, ActivityType.Watching));
