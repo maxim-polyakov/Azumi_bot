@@ -22,7 +22,18 @@ namespace Discord_bot {
 
         private ulong testGuildId;
 
-        private string commands(string chosen_item)
+
+        private string CommandsTrible(string command, string item1, string item2)
+        {
+            string outstring = string.Empty;
+            Dictionary<string, string> info_dict = new Dictionary<string, string>() {
+                {"/weather", "True" }
+            };
+            info_dict.TryGetValue(command, out outstring);
+            return outstring;
+        }
+
+        private string CommandsDouble(string command, string item)
         {
             string outstring = string.Empty;
             Dictionary<string, string> info_dict = new Dictionary<string, string>() {
@@ -40,7 +51,24 @@ namespace Discord_bot {
                 {"/resume", "True" },
                 {"/weather", "True" }
             };
-            info_dict.TryGetValue(chosen_item, out outstring);
+            info_dict.TryGetValue(command, out outstring);
+            return outstring;
+        }
+
+        private string CommandsSingle(string command)
+        {
+            string outstring = string.Empty;
+            Dictionary<string, string> info_dict = new Dictionary<string, string>() {
+                {"/join", "True" },
+                {"/leave", "True" },
+                {"/start_recording", "True" },
+                {"/stop_recording", "True" },
+                {"/pause", "True"},
+                {"/stop", "True" },
+                {"/queue", "True" },
+                {"/resume", "True" },
+            };
+            info_dict.TryGetValue(command, out outstring);
             return outstring;
         }
 
@@ -95,7 +123,17 @@ namespace Discord_bot {
 
                     var str = message.Content;
                     string[] words = str.Split(' ');
-                    var output = commands(words[0]);
+
+                    var output = CommandsSingle(words[0]);
+
+                    if (words.Length == 2)
+                    {
+                        output = CommandsDouble(words[0], words[1]);
+                    }
+                    else if (words.Length == 3)
+                    {
+
+                    }
                     message.Channel.SendMessageAsync(output);
                 }
 
